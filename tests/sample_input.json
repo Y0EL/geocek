@@ -1,0 +1,256 @@
+{
+  "extraction_timestamp": "2026-04-08T_runtime",
+  "image_hash_note": "Manual LVM extraction \u2014 no EXIF available from upload",
+
+  "1_media_and_capture_metadata": {
+    "capture_method": "Handheld smartphone, candid",
+    "camera_orientation": "Portrait (vertical)",
+    "frame_composition": "Subject centered, rear-facing, close-mid range",
+    "estimated_focal_length": "Wide to normal (~24-28mm equivalent)",
+    "image_quality": "Medium \u2014 significant noise due to low-light + high ISO",
+    "motion_blur_present": true,
+    "motion_blur_location": "Background vehicles, brake lights",
+    "lens_distortion": false,
+    "chromatic_aberration": "Minor, visible on brake light edges",
+    "image_stabilization_effect": "Slight camera shake, handheld confirmed",
+    "aspect_ratio": "3:4 portrait",
+    "bokeh_present": false,
+    "overexposed_regions": "Brake lights, street lamp top-left, traffic light",
+    "underexposed_regions": "Lower road surface, subject lower body"
+  },
+
+  "2_temporal_and_environmental": {
+    "time_of_day": "Malam hari",
+    "time_estimation_range": "19:00 - 22:00 WIB",
+    "time_confidence": "high",
+    "time_reasoning": "Langit gelap total, lampu jalan aktif, lampu kendaraan menyala semua, tidak ada ambient natural light",
+    "weather_condition": "Cerah/tidak hujan",
+    "weather_confidence": "high",
+    "weather_reasoning": "Aspal kering terlihat di area pinggir jalan, tidak ada refleksi hujan di jalan, tidak ada tanda basah di kendaraan",
+    "ground_wetness": "Kering",
+    "visibility_level": "Baik untuk malam urban \u2014 pencahayaan jalan memadai",
+    "air_quality_visual": "Slight haze dari polusi kendaraan, terlihat dari light scatter di background",
+    "overall_lighting_temperature": "Mixed \u2014 warm orange dari lampu sodium street lamp, cool dari LED traffic light dan neon signage RS",
+    "ambient_light_sources": [
+      "Street lamp sodium/mercury vapor (kiri atas)",
+      "Traffic light merah (tengah atas)",
+      "Brake lights kendaraan depan",
+      "Neon sign RS (hijau, kiri atas)",
+      "LED billboard/signage background"
+    ]
+  },
+
+  "3_geolocation_signals": {
+    "country_inference": "Indonesia",
+    "country_confidence": "certain",
+    "region_inference": "DKI Jakarta atau Jabodetabek",
+    "region_confidence": "very_high",
+    "province_guess": "DKI Jakarta",
+    "city_area_guess": "Jakarta Utara \u2014 kemungkinan koridor Pluit / Penjaringan / Sunter",
+    "city_confidence": "medium-high",
+
+    "geo_signal_1_plate": {
+      "signal": "Plat nomor prefix B",
+      "meaning": "Wilayah registrasi DKI Jakarta, Depok, Tangerang, Bekasi (Jabodetabek)",
+      "weight": "very_high"
+    },
+    "geo_signal_2_hospital_sign": {
+      "signal": "Signage hijau bertuliskan 'RS ATR...' atau kemungkinan 'RS ATMAJAYA'",
+      "meaning": "RS Atmajaya berlokasi di Jl. Pluit Raya No.2, Pluit, Jakarta Utara \u2014 jika benar maka lokasi sangat spesifik",
+      "weight": "high",
+      "confidence": "medium \u2014 teks parsial, perlu konfirmasi zoom"
+    },
+    "geo_signal_3_road_type": {
+      "signal": "Jalan arteri urban lebar, multi-lane, dengan median",
+      "meaning": "Jalan protokol kota besar, bukan jalan kampung",
+      "weight": "medium"
+    },
+    "geo_signal_4_traffic_density": {
+      "signal": "Kemacetan padat malam hari, campuran motor + SUV + sedan",
+      "meaning": "Konsisten dengan arterial road Jakarta jam sibuk malam",
+      "weight": "medium"
+    },
+    "geo_signal_5_vehicle_mix": {
+      "signal": "SUV modern (kanan frame), sedan, motor matik",
+      "meaning": "Menengah ke atas \u2014 konsisten dengan area komersial/residensial Jakarta",
+      "weight": "low-medium"
+    },
+
+    "coordinate_estimate": {
+      "method": "Signal aggregation \u2014 tidak ada GPS",
+      "best_guess_area": "Sekitar Jl. Pluit Raya / Jl. Yos Sudarso / Jl. Danau Sunter, Jakarta Utara",
+      "lat_lon_rough": "-6.12 to -6.15, 106.78 to 106.87",
+      "confidence": "medium \u2014 perlu konfirmasi via streetview atau RS sign verification"
+    }
+  },
+
+  "4_road_and_infrastructure": {
+    "road_surface_material": "Aspal hotmix",
+    "road_condition": "Baik, tidak terlihat lubang di area visible",
+    "road_width_estimation": "Minimum 4 lajur \u2014 estimasi 14-16 meter total",
+    "road_type": "Jalan arteri sekunder/primer urban",
+    "road_marking_visible": "Tidak jelas \u2014 tertutup kendaraan dan angle rendah",
+    "median_present": true,
+    "median_type": "Kerb beton rendah dengan permukaan flat \u2014 terlihat di sisi kiri frame bawah",
+    "median_material": "Beton cor",
+    "median_condition": "Intact, tidak rusak",
+    "median_width_estimation": "0.3 - 0.5 meter",
+    "sidewalk_present": "Tidak terlihat jelas dalam frame",
+    "traffic_light_present": true,
+    "traffic_light_status": "Merah \u2014 semua kendaraan berhenti",
+    "traffic_light_type": "LED modern",
+    "overhead_wires": "Tidak terlihat jelas di area fokus",
+    "street_lighting_poles": "Terlihat 1 tiang lampu kiri atas, desain modern",
+    "drainage_visible": false
+  },
+
+  "5_traffic_and_scene_context": {
+    "traffic_density": "Padat \u2014 kemacetan (stop-and-go atau full stop di lampu merah)",
+    "traffic_direction_photo_subject": "Searah \u2014 semua kendaraan menghadap sama dengan subjek",
+    "vehicle_count_visible": "Estimasi 8-12 kendaraan dalam frame",
+    "lane_discipline": "Rapat, motor mengisi celah antar mobil \u2014 tipikal Jakarta",
+    "stopping_reason": "Traffic light merah",
+    "scene_tension": "Normal \u2014 tidak ada insiden",
+    "pedestrian_visible": false,
+    "roadside_activity": "Tidak terlihat PKL atau aktivitas tepi jalan dalam frame"
+  },
+
+  "6_primary_vehicle_subject": {
+    "vehicle_type": "Sepeda motor skuter matik",
+    "vehicle_brand": "Honda",
+    "vehicle_brand_confidence": "certain \u2014 logo Honda pada helm pengendara",
+    "vehicle_model_guess": "Honda Vario 125/150 atau Beat generasi 2018-2022",
+    "vehicle_model_confidence": "medium",
+    "vehicle_model_reasoning": "Desain bodi belakang, bentuk lampu rem kotak split, lebar bodi, posisi knalpot",
+    "vehicle_color_primary": "Merah marun / dark red",
+    "vehicle_color_secondary": "Hitam (aksen bodi bawah)",
+    "vehicle_color_confidence": "medium \u2014 malam hari, lit oleh brake light sendiri",
+    "license_plate": {
+      "visible": true,
+      "plate_color_background": "Putih",
+      "plate_color_text": "Hitam",
+      "plate_era_inference": "Post-2011 (plat putih = generasi baru Samsat)",
+      "plate_prefix": "B",
+      "plate_region": "DKI Jakarta / Jabodetabek",
+      "plate_full_text_guess": "B 4114 BB_ (parsial \u2014 digit tengah dan suffix tidak fully clear)",
+      "plate_confidence": "medium \u2014 malam, slight motion blur",
+      "plate_sub_row_text": "11 50 atau 11 56 (kemungkinan masa berlaku STNK: Nov 2050/Nov 2056 \u2014 atau tahun 2025/2026)"
+    },
+    "vehicle_condition": "Baik, tidak terlihat kerusakan",
+    "modifications_visible": "Tidak ada modifikasi signifikan",
+    "sticker_visible": false,
+    "mirrors_present": "Tidak terlihat dari angle belakang",
+    "brake_light_active": true,
+    "brake_light_shape": "Kotak split \u2014 dua panel terpisah dengan reflektor samping",
+    "exhaust_visible": true,
+    "exhaust_position": "Kanan bawah",
+    "rear_carrier_present": false,
+    "box_or_cargo": false
+  },
+
+  "7_rider_subject": {
+    "subject_count_on_vehicle": 1,
+    "rider_gender_guess": "Laki-laki",
+    "rider_gender_confidence": "high \u2014 postur tubuh, lebar bahu",
+    "rider_age_bracket": "25-40 tahun",
+    "rider_build": "Sedang \u2014 tidak kurus, tidak gemuk",
+    "helmet": {
+      "present": true,
+      "type": "Full-face",
+      "color": "Hitam",
+      "brand": "Honda (branded helmet \u2014 logo terlihat di belakang helm)",
+      "brand_confidence": "certain",
+      "condition": "Baik"
+    },
+    "top_clothing": "Polo shirt / kaos berkerah, warna abu-abu/biru muda",
+    "top_clothing_sleeve": "Pendek",
+    "bottom_clothing": "Tidak terlihat jelas",
+    "footwear": "Tidak terlihat dalam frame",
+    "accessories": {
+      "backpack": true,
+      "backpack_color": "Abu-abu gelap / hitam",
+      "backpack_size": "Medium \u2014 punggung penuh, kemungkinan laptop bag atau tas kuliah/kerja",
+      "backpack_brand_guess": "Tidak teridentifikasi",
+      "watch_visible": false,
+      "gloves": false
+    },
+    "posture": "Duduk tegak, setir dengan kedua tangan, posisi normal berkendara",
+    "phone_usage": false,
+    "rider_looking": "Menghadap depan, tidak berbalik"
+  },
+
+  "8_background_vehicles": {
+    "vehicle_left_frame": {
+      "type": "SUV",
+      "color": "Gelap \u2014 hitam atau dark grey",
+      "brand_guess": "Toyota Fortuner atau Mitsubishi Pajero Sport",
+      "status": "Berhenti di lampu merah",
+      "plate_visible": false
+    },
+    "vehicle_right_frame": {
+      "type": "SUV / Crossover",
+      "color": "Putih",
+      "brand_guess": "Honda CR-V atau Toyota RAV4",
+      "status": "Berhenti",
+      "plate_visible": false
+    },
+    "vehicles_far_background": "Minimal 4-6 kendaraan lagi, terlihat blur \u2014 campuran sedan dan motor",
+    "vehicle_era_general": "2015-2024 \u2014 kendaraan relatif modern",
+    "socioeconomic_vehicle_inference": "Menengah ke atas \u2014 dominasi SUV dan crossover"
+  },
+
+  "9_signage_and_ocr": {
+    "sign_1": {
+      "text_raw": "RS ATR... (parsial)",
+      "text_full_guess": "RS ATMAJAYA atau RS ATRIUM",
+      "sign_type": "Rumah sakit \u2014 signage gedung",
+      "sign_color": "Hijau neon/LED",
+      "geolocation_value": "VERY HIGH \u2014 RS Atmajaya = Pluit, Jakarta Utara",
+      "confidence": "medium \u2014 teks terpotong frame"
+    },
+    "sign_2": {
+      "text_raw": "Tidak terbaca jelas",
+      "location_in_frame": "Background kiri, billboard atau spanduk",
+      "geolocation_value": "low"
+    },
+    "traffic_light_color_visible": "Merah",
+    "environmental_text_other": "Tidak ada teks jalan/gang teridentifikasi dalam frame"
+  },
+
+  "10_structural_image_analysis": {
+    "vanishing_point": "Tengah-atas frame \u2014 perspektif lurus ke depan",
+    "depth_layers": [
+      "Foreground: aspal + median beton",
+      "Mid: subjek motor + pengendara",
+      "Background near: kendaraan kiri-kanan",
+      "Background far: traffic light, street lamp, signage RS"
+    ],
+    "frame_clutter": "Tinggi \u2014 banyak elemen visual bersaing",
+    "color_palette_dominant": ["Merah (brake light)", "Hitam", "Abu-abu", "Hijau (RS sign)", "Putih (plat, headlight)"],
+    "noise_level": "Tinggi \u2014 malam + high ISO",
+    "sharpness_subject": "Medium \u2014 cukup untuk identifikasi plat dan helm",
+    "sharpness_background": "Low \u2014 blur dan noise",
+    "photographer_position": "Di belakang subjek, mounted atau handheld dari motor/mobil lain, elevasi seat height ~0.9-1.1m"
+  },
+
+  "11_osint_summary": {
+    "location_confidence_overall": "Medium-High",
+    "strongest_signal": "Plat B + RS Atmajaya sign = Jakarta Utara, kemungkinan besar koridor Pluit",
+    "recommended_verification": [
+      "Zoom enhance RS sign untuk konfirmasi nama lengkap",
+      "Google Streetview di Jl. Pluit Raya untuk match road width + median + signage",
+      "Cross-ref plat B 4114 ke Samsat jika akses tersedia"
+    ],
+    "scene_classification": "Normal commute \u2014 kemacetan malam hari, tidak ada indikasi kejadian",
+    "subject_profile_summary": "Pengendara motor Honda matik, laki-laki dewasa, berhelm lengkap, membawa tas punggung besar, berhenti di lampu merah \u2014 profil komuter harian"
+  },
+
+  "geo_signals": {
+    "plate_prefix": "B",
+    "landmark_sign": "RS Atmajaya",
+    "road_type": "arteri_primer",
+    "road_lanes": 4,
+    "median_present": true,
+    "traffic_light_present": true
+  }
+}

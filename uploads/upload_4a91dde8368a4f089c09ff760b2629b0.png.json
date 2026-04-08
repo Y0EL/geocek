@@ -1,0 +1,137 @@
+{
+  "extraction_timestamp": "2026-04-08T20:00:00Z",
+  "image_hash_note": "Manual LVM extraction \u2014 no EXIF available from upload",
+  "1_media_and_capture_metadata": {
+    "capture_method": "Mobile smartphone, handheld, casual",
+    "camera_orientation": "Landscape (horizontal)",
+    "frame_composition": "Street scene with foreground road, midground trees and background high-rise buildings",
+    "estimated_focal_length": "Normal (~24-28mm equivalent)",
+    "image_quality": "High",
+    "motion_blur_present": false,
+    "motion_blur_location": "",
+    "lens_distortion": false,
+    "chromatic_aberration": "",
+    "image_stabilization_effect": "",
+    "aspect_ratio": "16:9",
+    "bokeh_present": false,
+    "overexposed_regions": false,
+    "underexposed_regions": false
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "Malam hari",
+    "time_estimation_range": "19:00 - 22:00 WIB",
+    "time_confidence": "high",
+    "time_reasoning": "Bright daylight, clear sky, shadows indicating late afternoon or early evening",
+    "weather_condition": "Cerah/tidak hujan",
+    "weather_confidence": "high",
+    "weather_reasoning": "Bright sunlight, clear sky, no clouds or rain visible",
+    "ground_wetness": "Kering",
+    "visibility_level": "Jelas dan optimal",
+    "air_quality_visual": "Tidak terlihat polusi atau kabut",
+    "overall_lighting_temperature": "Netral ke hangat",
+    "ambient_light_sources": [
+      "Sinar matahari"
+    ]
+  },
+  "3_geolocation_signals": {
+    "country_inference": "Indonesia",
+    "country_confidence": "certain",
+    "region_inference": "DKI Jakarta atau Jabodetabek",
+    "region_confidence": "very_high",
+    "province_guess": "DKI Jakarta",
+    "city_area_guess": "Jakarta Selatan",
+    "city_confidence": "medium",
+    "geo_signal_1_plate": {
+      "signal": "B",
+      "meaning": "Plat nomor kendaraan Indonesia, B menandakan Jakarta",
+      "weight": "High"
+    },
+    "geo_signal_2_landmark": {
+      "signal": "Jalan Puri Indah",
+      "meaning": "Nama jalan di Jakarta, dekat area Puri Indah",
+      "weight": "Medium",
+      "confidence": "Medium"
+    },
+    "geo_signal_3_road": {
+      "road_type": "Jalan utama arteri atau jalan raya dalam kota",
+      "road_name_inferred": "Jalan Puri Indah",
+      "location_specific": "Jakarta Selatan",
+      "confidence": "Medium"
+    },
+    "coordinate_estimate": {
+      "latitude": -6.255,
+      "longitude": 106.724,
+      "confidence": "Medium"
+    }
+  },
+  "4_road_and_infrastructure": {
+    "road_surface_material": "Asphalt",
+    "road_condition": "Baik, tidak berlubang",
+    "road_width_estimation": "4-6 lajur",
+    "road_type": "Jalan arteri utama kota",
+    "road_marking_visible": "Line tengah dan garis sisi",
+    "median_present": true,
+    "median_type": "Pembatas jalan beton",
+    "median_material": "Beton",
+    "median_condition": "Baik, tidak rusak",
+    "median_width_estimation": "1 meter",
+    "sidewalk_present": true,
+    "traffic_light_present": true,
+    "traffic_light_status": "Berfungsi, hijau atau kuning",
+    "traffic_light_type": "Lampu lalu lintas standar",
+    "overhead_wires": true,
+    "street_lighting_poles": true,
+    "drainage_visible": true
+  },
+  "5_traffic_and_scene_context": {
+    "traffic_density": "Sedang hingga tinggi",
+    "vehicle_types": [
+      "Mobil pribadi",
+      "Motor"
+    ],
+    "pedestrian_presence": "Sedikit terlihat di kejauhan",
+    "scene_activity": "Kegiatan lalu lintas normal, kendaraan bergerak lancar"
+  },
+  "6_primary_vehicle_subject": {
+    "vehicle_type": "Sedan hitam",
+    "license_plate": {
+      "visible": true,
+      "plate_prefix": "B",
+      "plate_full_text_guess": "B 1234 XY"
+    }
+  },
+  "7_rider_subject": {},
+  "8_background_vehicles": {
+    "vehicles": [
+      {
+        "type": "Mobil",
+        "position": "Jalan sebelah kiri dari kendaraan utama",
+        "movement": "Lurus ke arah utara"
+      },
+      {
+        "type": "Motor",
+        "position": "Di belakang kendaraan utama, di jalur kiri",
+        "movement": "Lurus"
+      }
+    ]
+  },
+  "9_signage_and_ocr": {
+    "sign_1": {
+      "text_raw": "Jalan Puri Indah",
+      "text_full_guess": "Jalan Puri Indah",
+      "sign_type": "Nama jalan \u2014 signage jalan"
+    }
+  },
+  "10_structural_image_analysis": {},
+  "11_osint_summary": {
+    "summary": "Gambar diambil di jalan utama di Jakarta Selatan, dekat area Puri Indah. Kendaraan utama memiliki plat nomor B yang menandakan Jakarta. Infrastruktur jalan lengkap dan terawat, dengan lampu lalu lintas dan trotoar. Area ini kemungkinan padat lalu lintas saat pengambilan gambar, pada sore hingga malam hari."
+  },
+  "geo_signals": {
+    "plate_prefix": "B",
+    "landmark_sign": "Jalan Puri Indah",
+    "road_type": "Jalan utama arteri kota",
+    "road_lanes": 4,
+    "median_present": true,
+    "traffic_light_present": true
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "midday",
+    "weather": "partly cloudy",
+    "lighting": "natural",
+    "shadow_direction": "SW",
+    "camera_heading": "E"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": "DKI Jakarta",
+    "city": "Jakarta",
+    "district_kecamatan": "Jakarta Selatan",
+    "subdistrict_kelurahan": null,
+    "primary_street_name": "Jl. Benyamin Sueb",
+    "secondary_street_name": null,
+    "junction_name": null,
+    "confidence_signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jl. Benyamin Sueb",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "total_lanes": 2,
+    "lanes_per_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "road_markings": [
+      "center_line"
+    ],
+    "road_condition": "good",
+    "sidewalk_present": true,
+    "sidewalk_type": "paving_block",
+    "overhead_cables": true,
+    "utility_poles": "wooden",
+    "drainage_type": "covered"
+  },
+  "5_primary_subject": {
+    "vehicle_type": "motorcycle",
+    "vehicle_brand": "",
+    "plate_text": "",
+    "plate_prefix": null,
+    "plate_region": null
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": null,
+    "water_body_type": null
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "residential/commercial",
+    "commercial_density": "medium",
+    "building_density": "medium",
+    "vegetation_density": "low",
+    "vegetation_type": "urban_sparse"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [
+      "Jalan Benyamin Sueb"
+    ],
+    "street_signs": [
+      "Jalan Benyamin Sueb"
+    ],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "The image shows a street scene in Jakarta Selatan, DKI Jakarta, Indonesia. The street sign reads 'Jl. Benyamin Sueb,' which is a known road in South Jakarta. The presence of motorcycles, overhead utility cables, and the urban environment further confirm an urban Jakarta setting. The layout and infrastructure details match typical Jakarta street characteristics.",
+  "geo_signals": {
+    "plate_prefix": null,
+    "plate_region": null,
+    "street_name": "Jl. Benyamin Sueb",
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": "Jakarta Selatan",
+    "city_district": "Jakarta",
+    "province": "DKI Jakarta",
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": "arteri_primer",
+    "road_lanes": 2,
+    "road_lanes_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "traffic_light_present": false,
+    "sidewalk_present": true,
+    "infrastructure_type": "normal_road",
+    "camera_heading": "E",
+    "shadow_direction": "SW",
+    "time_of_day": "midday",
+    "visible_texts": [
+      "Jalan Benyamin Sueb"
+    ],
+    "poi_list": [],
+    "transjakarta_corridor": null,
+    "transjakarta_halte": null,
+    "bus_stop_visible": false,
+    "vegetation_type": "urban_sparse",
+    "commercial_density": "medium",
+    "area_type": "residential/commercial"
+  },
+  "image_path": "C:\\Users\\Engineer02\\Desktop\\Geocek\\geosignal\\uploads\\upload_58587280a36a41dfb7c0763a61c3331a.jpg"
+}

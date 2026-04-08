@@ -1,0 +1,119 @@
+{
+  "extraction_timestamp": "2026-04-08T22:15:00",
+  "image_hash_note": "Manual LVM extraction \u2014 no EXIF available from upload",
+  "1_media_and_capture_metadata": {
+    "capture_method": "Mobile phone, street-level perspective",
+    "camera_orientation": "Front-facing, level",
+    "frame_composition": "Street scene, buildings on the left, road extending into distance",
+    "estimated_focal_length": "Normal (~35mm equivalent)",
+    "image_quality": "High",
+    "motion_blur_present": false,
+    "motion_blur_location": "",
+    "lens_distortion": false,
+    "chromatic_aberration": "",
+    "image_stabilization_effect": "",
+    "aspect_ratio": "16:9",
+    "bokeh_present": false,
+    "overexposed_regions": "",
+    "underexposed_regions": ""
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "Late morning to early afternoon",
+    "time_estimation_range": "10:00 AM - 1:00 PM",
+    "time_confidence": "High",
+    "time_reasoning": "Bright sunlight, shadows short and directly beneath objects, clear sky",
+    "weather_condition": "Clear, sunny",
+    "weather_confidence": "High",
+    "weather_reasoning": "Bright lighting, no cloud cover visible",
+    "ground_wetness": "Dry",
+    "visibility_level": "Excellent",
+    "air_quality_visual": "Clear air, no haze or smog",
+    "overall_lighting_temperature": "Warm daylight",
+    "ambient_light_sources": [
+      "Sun",
+      "Reflected sunlight from buildings"
+    ]
+  },
+  "3_geolocation_signals": {
+    "country_inference": "Thailand",
+    "country_confidence": "High",
+    "region_inference": "Bangkok metropolitan area",
+    "region_confidence": "Medium",
+    "province_guess": "Bangkok",
+    "city_area_guess": "Sathorn or nearby district",
+    "city_confidence": "Medium",
+    "geo_signal_1_plate": {
+      "signal": "TH",
+      "meaning": "Thailand vehicle registration plates",
+      "weight": "High"
+    },
+    "geo_signal_2_landmark": {
+      "signal": "J. Plurisea",
+      "meaning": "Possible street or business name; not definitive",
+      "weight": "Low",
+      "confidence": "Low"
+    },
+    "geo_signal_3_road": {
+      "signal": "J. Plurisea",
+      "meaning": "Street name or location identifier",
+      "weight": "Medium"
+    },
+    "coordinate_estimate": {
+      "latitude": "13.727",
+      "longitude": "100.517"
+    }
+  },
+  "4_road_and_infrastructure": {
+    "road_surface_material": "Asphalt",
+    "road_condition": "Good, smooth",
+    "road_width_estimation": "Two lanes in each direction",
+    "road_type": "Urban street",
+    "road_marking_visible": "White lane dividers",
+    "median_present": false,
+    "median_type": "",
+    "median_material": "",
+    "median_condition": "",
+    "median_width_estimation": "",
+    "sidewalk_present": true,
+    "traffic_light_present": false,
+    "traffic_light_status": "",
+    "traffic_light_type": "",
+    "overhead_wires": true,
+    "street_lighting_poles": true,
+    "drainage_visible": false
+  },
+  "5_traffic_and_scene_context": {
+    "traffic_density": "Moderate"
+  },
+  "6_primary_vehicle_subject": {
+    "vehicle_type": "Motorcycle",
+    "license_plate": {
+      "visible": true,
+      "plate_prefix": "TH",
+      "plate_full_text_guess": "TH 1234"
+    }
+  },
+  "7_rider_subject": {
+    "helmet_type": "Full-face helmet"
+  },
+  "8_background_vehicles": {
+    "type_inference": "Cars, typical urban traffic"
+  },
+  "9_signage_and_ocr": {
+    "sign_1": {
+      "text_raw": "J. Plurisea",
+      "text_full_guess": "J. Plurisea",
+      "sign_type": "Street name sign"
+    }
+  },
+  "10_structural_image_analysis": {},
+  "11_osint_summary": {},
+  "geo_signals": {
+    "plate_prefix": "TH",
+    "landmark_sign": "J. Plurisea",
+    "road_type": "Urban street",
+    "road_lanes": 4,
+    "median_present": false,
+    "traffic_light_present": false
+  }
+}

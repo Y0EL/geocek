@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geocek | Workspace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #D97757;
+            --bg: #F9F7F5;
+            --text: #2D2D2D;
+            --border: #E5E1DE;
+            --muted: #9C9189;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* grid bg */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(217,119,87,0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(217,119,87,0.045) 1px, transparent 1px);
+            background-size: 44px 44px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─────────────────────────────────────────
+           STAGE — the animated split container
+        ───────────────────────────────────────── */
+        #stage {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            /* default: single column, narrow */
+            max-width: 380px;
+            gap: 0;
+            transition:
+                max-width 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+                gap       0.65s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* split state: wide two-column */
+        #stage.split {
+            max-width: 820px;
+            gap: 64px;
+        }
+
+        /* ─────────────────────────────────────────
+           LEFT PANEL
+        ───────────────────────────────────────── */
+        #leftPanel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+            /* default: centered, takes full width */
+            width: 380px;
+            transition: width 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #stage.split #leftPanel {
+            width: 300px;
+        }
+
+        /* Globe */
+        #globe-container {
+            cursor: pointer;
+            flex-shrink: 0;
+            width: 300px;
+            height: 300px;
+            transition: width 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+                        height 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        /* glow shadow under globe */
+        #globe-container::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 22px;
+            background: radial-gradient(ellipse, rgba(217,119,87,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: opacity 0.4s ease;
+        }
+
+        #stage.split #globe-container {
+            width: 200px;
+            height: 200px;
+        }
+
+        .tagline {
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 8px;
+            transition: font-size 0.4s ease;
+        }
+
+        .headline {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--text);
+            line-height: 1;
+            margin-top: 4px;
+            transition: font-size 0.4s ease;
+        }
+
+        #stage.split .headline { font-size: 26px; }
+
+        .subline {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px;
+            line-height: 1.5;
+            transition: opacity 0.3s ease, max-height 0.4s ease;
+            max-height: 40px;
+            overflow: hidden;
+        }
+
+        #stage.split .subline {
+            opacity: 0;
+            max-height: 0;
+            margin-top: 0;
+        }
+
+        /* upload button */
+        #uploadBtn {
+            margin-top: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 32px;
+            background: var(--orange);
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.13em;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: transform 0.15s, box-shadow 0.15s, opacity 0.3s, margin 0.4s;
+            box-shadow: 0 4px 22px -4px rgba(217,119,87,0.45);
+        }
+
+        #uploadBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px -4px rgba(217,119,87,0.5); }
+        #uploadBtn:active { transform: translateY(0); }
+
+        /* hint below button */
+        .hint {
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 12px;
+            transition: opacity 0.3s ease, max-height 0.4s ease;
+            max-height: 20px;
+            overflow: hidden;
+        }
+
+        #stage.split .hint {
+            opacity: 0;
+            max-height: 0;
+            margin-top: 0;
+        }
+
+        /* change file link — shown in left panel when split */
+        #changeLink {
+            font-size: 11px;
+            color: var(--muted);
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            background: none;
+            border: none;
+            font-family: inherit;
+            letter-spacing: 0.05em;
+            margin-top: 16px;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.3s;
+        }
+        #changeLink:hover { color: var(--text); }
+        #stage.split #changeLink { opacity: 1; }
+        #stage:not(.split) #changeLink { pointer-events: none; }
+
+        /* ─────────────────────────────────────────
+           RIGHT PANEL — slides in from right
+        ───────────────────────────────────────── */
+        #rightPanel {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            /* hidden by default */
+            opacity: 0;
+            transform: translateX(48px);
+            pointer-events: none;
+            width: 0;
+            overflow: hidden;
+            transition:
+                opacity   0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+                width     0.65s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #stage.split #rightPanel {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+            width: 360px;
+            overflow: visible;
+        }
+
+        /* image preview */
+        #previewImg {
+            width: 100%;
+            max-height: 280px;
+            border-radius: 20px;
+            border: 1.5px solid var(--border);
+            box-shadow: 0 8px 40px -8px rgba(45,45,45,0.18);
+            object-fit: cover;
+            display: block;
+        }
+
+        /* meta row under image */
+        .img-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .img-meta-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+        .img-meta-size {
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--muted);
+        }
+
+        /* analyze button */
+        #analyzeBtn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 36px;
+            background: var(--text);
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 4px 20px -4px rgba(45,45,45,0.3);
+            width: 100%;
+            justify-content: center;
+        }
+        #analyzeBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px -4px rgba(45,45,45,0.4); }
+        #analyzeBtn:active { transform: translateY(0); }
+
+        /* ─────────────────────────────────────────
+           LOADING STATE
+        ───────────────────────────────────────── */
+        #loadingState {
+            position: relative;
+            z-index: 1;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            animation: fadeUp 0.4s ease;
+        }
+        #loadingState.visible { display: flex; }
+
+        #mapAnim {
+            width: 580px;
+            height: 330px;
+            border-radius: 24px;
+            overflow: hidden;
+            background: #fff;
+            border: 1.5px solid var(--border);
+            box-shadow: 0 4px 32px -4px rgba(217,119,87,0.10);
+        }
+
+        #progressPanel { width: 100%; margin-top: 20px; }
+
+        .progress-bar { transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .log-entry {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .pulse-dot {
+            width: 7px; height: 7px;
+            background: var(--orange);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 5px;
+            animation: pulse 1.4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.45; transform: scale(0.7); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* hidden file input */
+        #fileInput { display: none; }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════
+         MAIN UI
+    ═══════════════════════════════════════════ -->
+    <div id="stage">
+
+        <!-- LEFT: globe + title + upload button -->
+        <div id="leftPanel">
+            <div id="globe-container" title="Click to select image"></div>
+
+            <p class="tagline">Professional OSINT Geolocation</p>
+            <h1 class="headline">Geocek</h1>
+            <p class="subline">Drop an image anywhere, or click the globe</p>
+
+            <button id="uploadBtn" type="button" onclick="document.getElementById('fileInput').click()">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+                Select Image
+            </button>
+            <p class="hint">JPG · PNG · WEBP · max 16 MB</p>
+
+            <button id="changeLink" type="button" onclick="document.getElementById('fileInput').click()">
+                change image
+            </button>
+        </div>
+
+        <!-- RIGHT: image preview + form (slides in) -->
+        <div id="rightPanel">
+            <img id="previewImg" src="" alt="preview">
+
+            <div class="img-meta">
+                <span class="img-meta-name" id="fileName">—</span>
+                <span class="img-meta-size" id="fileSize"></span>
+            </div>
+
+            <form id="uploadForm" action="/analyze" method="post" enctype="multipart/form-data" style="width:100%">
+                <input type="file" name="image" id="fileInput" accept="image/*">
+                <button type="submit" id="analyzeBtn">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path stroke-linecap="round" d="m21 21-4.35-4.35"/>
+                    </svg>
+                    Analyze Location
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         LOADING STATE
+    ═══════════════════════════════════════════ -->
+    <div id="loadingState">
+
+        <div id="mapAnim"></div>
+
+        <div style="margin-top:14px;width:100%;display:flex;align-items:center;gap:8px;">
+            <div class="pulse-dot" style="margin-top:0;flex-shrink:0;"></div>
+            <span id="statusText" style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--text);letter-spacing:0.14em;text-transform:uppercase;">Initializing pipeline...</span>
+            <span id="percentText" style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--orange);margin-left:auto;">0%</span>
+        </div>
+
+        <div id="progressPanel">
+            <div style="width:100%;height:3px;background:#E5E1DE;border-radius:99px;overflow:hidden;margin-bottom:20px;margin-top:8px;">
+                <div id="progressBar" class="progress-bar" style="height:100%;width:0%;background:var(--orange);border-radius:99px;"></div>
+            </div>
+            <div id="logContainer" style="display:flex;flex-direction:column;gap:8px;"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+        // ── Globe Lottie ─────────────────────────────────────────────────────
+        const globeAnim = lottie.loadAnimation({
+            container: document.getElementById('globe-container'),
+            renderer:  'svg',
+            loop:      true,
+            autoplay:  true,
+            path:      '/static/globe.json',
+        });
+
+        document.getElementById('globe-container').addEventListener('click', () => {
+            document.getElementById('fileInput').click();
+        });
+
+        // drag glow
+        document.getElementById('globe-container').addEventListener('dragover', e => {
+            e.preventDefault();
+            e.currentTarget.style.filter = 'drop-shadow(0 0 20px rgba(217,119,87,0.5))';
+        });
+        document.getElementById('globe-container').addEventListener('dragleave', e => {
+            e.currentTarget.style.filter = '';
+        });
+
+        // ── Map Lottie (loading) ─────────────────────────────────────────────
+        let mapAnim = null;
+        function initMapAnim() {
+            if (mapAnim) return;
+            mapAnim = lottie.loadAnimation({
+                container: document.getElementById('mapAnim'),
+                renderer:  'svg',
+                loop:      true,
+                autoplay:  true,
+                path:      '/static/loading.json',
+            });
+        }
+
+        // ── File handling ────────────────────────────────────────────────────
+        document.getElementById('fileInput').addEventListener('change', handleFile);
+
+        // global drag-drop
+        document.body.addEventListener('dragover', e => e.preventDefault());
+        document.body.addEventListener('drop', e => {
+            e.preventDefault();
+            document.getElementById('globe-container').style.filter = '';
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const dt = new DataTransfer();
+                dt.items.add(file);
+                document.getElementById('fileInput').files = dt.files;
+                handleFile({ target: document.getElementById('fileInput') });
+            }
+        });
+
+        function formatBytes(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' KB';
+            return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+        }
+
+        function handleFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = ev => {
+                document.getElementById('previewImg').src = ev.target.result;
+                document.getElementById('fileName').textContent = file.name;
+                document.getElementById('fileSize').textContent = formatBytes(file.size);
+
+                // Trigger split layout
+                document.getElementById('stage').classList.add('split');
+
+                // Slow globe a bit
+                globeAnim.setSpeed(0.55);
+
+                // Swap button label
+                document.getElementById('uploadBtn').innerHTML = `
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                    </svg>
+                    New Image
+                `;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // ── Progress steps ───────────────────────────────────────────────────
+        const steps = [
+            { p: 12, t: "MEDIA VERIFICATION",  d: "Verifying image authenticity and integrity..." },
+            { p: 30, t: "VISION ANALYSIS",      d: "Extracting spatial signals, OCR, and visual context..." },
+            { p: 52, t: "SPATIAL ENGINE",       d: "Running multi-provider geocoding..." },
+            { p: 74, t: "AI AGENT REFINEMENT",  d: "Computing coordinate probability and precision..." },
+            { p: 92, t: "REPORT GENERATION",    d: "Assembling interactive satellite map..." },
+        ];
+
+        document.getElementById('uploadForm').addEventListener('submit', () => {
+            document.getElementById('stage').style.display = 'none';
+            const ls = document.getElementById('loadingState');
+            ls.classList.add('visible');
+            initMapAnim();
+
+            const bar    = document.getElementById('progressBar');
+            const status = document.getElementById('statusText');
+            const pct    = document.getElementById('percentText');
+            const box    = document.getElementById('logContainer');
+
+            let i = 0;
+            const iv = setInterval(() => {
+                if (i < steps.length) {
+                    const s = steps[i];
+                    bar.style.width    = s.p + '%';
+                    pct.textContent    = s.p + '%';
+                    status.textContent = s.t;
+
+                    const el = document.createElement('div');
+                    el.className = 'log-entry';
+                    el.innerHTML = `
+                        <div class="pulse-dot"></div>
+                        <div>
+                            <p style="font-size:10px;font-weight:700;color:var(--text);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">${s.t}</p>
+                            <p style="font-size:12px;color:var(--muted);">${s.d}</p>
+                        </div>`;
+                    box.prepend(el);
+                    i++;
+                } else {
+                    clearInterval(iv);
+                    bar.style.width    = '100%';
+                    pct.textContent    = '100%';
+                    status.textContent = 'FINALIZING';
+                }
+            }, 2600);
+        });
+    </script>
+
+</body>
+</html>

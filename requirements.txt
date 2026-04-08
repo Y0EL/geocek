@@ -1,0 +1,31 @@
+# Layer 1 — Image forensics
+opencv-python
+Pillow
+PyExifTool
+
+# Layer 2 — Temporal
+suncalc
+timezonefinder
+requests        # Open-Meteo weather API
+
+# Layer 3 — OCR + Vehicle
+easyocr
+paddleocr
+fast-alpr
+
+# Layer 4 — Geosignal
+geopy
+osmnx
+shapely
+osmium
+
+# Layer 5 — Scoring
+shapely
+geopandas
+numpy
+
+# Layer 6 — Visualization + Verify
+folium
+rich
+click
+setuptools

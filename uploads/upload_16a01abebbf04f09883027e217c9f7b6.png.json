@@ -1,0 +1,25 @@
+{
+  "geo_signals": {
+    "country": "Indonesia",
+    "region": null,
+    "city": null,
+    "street_name": "Jalan Pluit Selatan",
+    "landmarks": null,
+    "sign_texts": [
+      "Jalan Pluit Selatan"
+    ],
+    "plates": null,
+    "other_signals": [
+      "Indonesian language",
+      "vehicle license plates typical of Indonesia"
+    ],
+    "visual_clues": [
+      "modern high-rise buildings",
+      "palm trees",
+      "traffic cones",
+      "style of street infrastructure consistent with Indonesian urban areas"
+    ],
+    "time_of_day": "daytime (likely late morning or early afternoon based on shadows and lighting)",
+    "additional_notes": "The street name visible on the road is in Indonesian, confirming the location in Indonesia, specifically in Jakarta's North Jakarta area."
+  }
+}

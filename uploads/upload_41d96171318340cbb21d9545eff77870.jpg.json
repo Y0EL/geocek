@@ -1,0 +1,129 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "midday",
+    "weather": "clear",
+    "lighting": "harsh_sun",
+    "shadow_direction": "W",
+    "camera_heading": "N"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": "DKI Jakarta",
+    "city": null,
+    "district_kecamatan": null,
+    "subdistrict_kelurahan": null,
+    "primary_street_name": "Jalan S. Prapto",
+    "secondary_street_name": null,
+    "junction_name": null,
+    "confidence_signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jln. S. Prapto",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "total_lanes": 2,
+    "lanes_per_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "road_markings": [
+      "center_line",
+      "lane_divider"
+    ],
+    "road_condition": "good",
+    "sidewalk_present": true,
+    "sidewalk_type": "paving_block",
+    "overhead_cables": true,
+    "utility_poles": "wooden",
+    "drainage_type": "covered"
+  },
+  "5_primary_subject": {
+    "vehicle_type": "motorcycle",
+    "vehicle_brand": "Honda",
+    "plate_text": "B 6889 VXR",
+    "plate_prefix": "B",
+    "plate_region": "DKI Jakarta"
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": null,
+    "water_body_type": null
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "residential",
+    "commercial_density": "low",
+    "building_density": "medium",
+    "vegetation_density": "medium",
+    "vegetation_type": "urban"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [
+      "Jln. S. Prapto"
+    ],
+    "street_signs": [
+      "Jln. S. Prapto"
+    ],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "The street name 'Jalan S. Prapto' is visible on the road surface OCR and the street sign, indicating a location within Jakarta, Indonesia. The presence of a motorcycle with a B license plate further confirms the location as DKI Jakarta. The road infrastructure and environment suggest a typical residential area in Jakarta, with overhead cables, wooden utility poles, and sidewalks. The absence of transit signage indicates this is not a major transit corridor, but the details align with a typical street scene in Jakarta's residential neighborhoods.",
+  "geo_signals": {
+    "plate_prefix": "B",
+    "plate_region": "DKI Jakarta",
+    "street_name": "Jalan S. Prapto",
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": null,
+    "city_district": null,
+    "province": "DKI Jakarta",
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": "residential",
+    "road_lanes": 2,
+    "road_lanes_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "traffic_light_present": false,
+    "sidewalk_present": true,
+    "infrastructure_type": "normal_road",
+    "camera_heading": "N",
+    "shadow_direction": "W",
+    "time_of_day": "midday",
+    "visible_texts": [
+      "Jln. S. Prapto"
+    ],
+    "poi_list": []
+  }
+}

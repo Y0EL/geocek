@@ -1,0 +1,135 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "morning",
+    "weather": "clear",
+    "lighting": "soft",
+    "shadow_direction": "NW",
+    "camera_heading": "S"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": "DKI Jakarta",
+    "city": "Jakarta Selatan",
+    "district_kecamatan": "Pasar Minggu",
+    "subdistrict_kelurahan": "",
+    "primary_street_name": "Jl. Siaga Raya",
+    "secondary_street_name": "",
+    "junction_name": "",
+    "confidence_signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jl. Siaga Raya",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "total_lanes": 2,
+    "lanes_per_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "road_markings": [
+      "center_line"
+    ],
+    "road_condition": "good",
+    "sidewalk_present": true,
+    "sidewalk_type": "paving_block",
+    "overhead_cables": true,
+    "utility_poles": "concrete",
+    "drainage_type": "open_ditch"
+  },
+  "5_primary_subject": {
+    "vehicle_type": "motorcycle",
+    "vehicle_brand": "",
+    "plate_text": "",
+    "plate_prefix": "",
+    "plate_region": ""
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": "",
+    "water_body_type": ""
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "mixed",
+    "commercial_density": "medium",
+    "building_density": "medium",
+    "vegetation_density": "medium",
+    "vegetation_type": "urban_sparse"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [
+      "Jl. Siaga Raya"
+    ],
+    "street_signs": [
+      "Jl. Siaga Raya"
+    ],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "The street name 'Jl. Siaga Raya' is clearly visible in the image, which is known to be located in Jakarta Selatan, DKI Jakarta. The surrounding vegetation and infrastructure support a mixed-use urban environment. The presence of motorcycles, concrete utility poles, and overhead cables is typical for urban streets in Jakarta.",
+  "geo_signals": {
+    "plate_prefix": null,
+    "plate_region": null,
+    "street_name": "Jl. Siaga Raya",
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": "Pasar Minggu",
+    "city_district": "Pasar Minggu",
+    "province": "DKI Jakarta",
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": "kolektor",
+    "road_lanes": 2,
+    "road_lanes_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "traffic_light_present": false,
+    "sidewalk_present": true,
+    "infrastructure_type": "normal_road",
+    "camera_heading": "S",
+    "shadow_direction": "NW",
+    "time_of_day": "morning",
+    "visible_texts": [
+      "Jl. Siaga Raya"
+    ],
+    "poi_list": [],
+    "transjakarta_corridor": null,
+    "transjakarta_halte": null,
+    "bus_stop_visible": false,
+    "vegetation_type": "urban_sparse",
+    "commercial_density": "medium",
+    "area_type": "mixed"
+  },
+  "image_path": "C:\\Users\\Engineer02\\Desktop\\Geocek\\geosignal\\uploads\\upload_4f665eea0dac4928b3cff026e25b7b99.jpg"
+}

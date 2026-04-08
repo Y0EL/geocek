@@ -1,0 +1,258 @@
+{
+  "1_media_metadata": {
+    "quality": "medium",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "midday",
+    "weather": "overcast",
+    "lighting": "soft",
+    "shadow_direction": null,
+    "camera_heading": null
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": null,
+    "city": null,
+    "district_kecamatan": null,
+    "subdistrict_kelurahan": null,
+    "primary_street_name": null,
+    "secondary_street_name": null,
+    "junction_name": null,
+    "confidence_signals": []
+  },
+  "4_road_infrastructure": {
+    "surface": null,
+    "total_lanes": 0,
+    "lanes_per_direction": 0,
+    "median_present": false,
+    "median_type": null,
+    "road_markings": [],
+    "road_marking_color": "null",
+    "road_condition": "null",
+    "sidewalk_present": false,
+    "sidewalk_type": null,
+    "overhead_cables": false,
+    "utility_poles": null,
+    "drainage_type": "none"
+  },
+  "5_primary_subject": {
+    "vehicle_type": null,
+    "vehicle_brand": null,
+    "plate_text": null,
+    "plate_prefix": null,
+    "plate_region": null
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": null,
+    "water_body_type": null
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "residential",
+    "commercial_density": "low",
+    "building_density": "medium",
+    "vegetation_density": "low",
+    "vegetation_type": "urban_sparse"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [],
+    "street_signs": [],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "WAJIB BAHASA INDONESIA: Gambar ini menunjukkan bagian dari bangunan rumah yang berada di daerah perumahan dengan kepadatan bangunan sedang. Tidak ada rambu jalan atau tanda pengenal lain yang terlihat untuk menentukan lokasi spesifik. Cuaca mendung dengan pencahayaan lembut mengindikasikan waktu siang hari.",
+  "12_reflections_and_hidden": {
+    "mirror_reflection_detected": false,
+    "mirror_reflection_texts": [],
+    "window_glass_reflection": false,
+    "window_reflection_texts": [],
+    "puddle_reflection": false,
+    "puddle_reflection_info": null,
+    "hidden_texts_in_reflection": []
+  },
+  "13_infrastructure_codes": {
+    "pln_pole_code": null,
+    "street_light_type": null,
+    "manhole_cover_brand": null,
+    "utility_box_brand": null,
+    "road_marking_color": null
+  },
+  "14_vegetation_detail": {
+    "dominant_species": null,
+    "species_list": [],
+    "planting_pattern": "none",
+    "grass_condition": "none"
+  },
+  "15_signage_deep": {
+    "billboard_texts": [],
+    "rw_rt_kelurahan_sign": null,
+    "property_for_sale_texts": [],
+    "government_board_text": null,
+    "banner_texts": [],
+    "direction_sign_texts": []
+  },
+  "16_sun_shadow_analysis": {
+    "shadow_visible": false,
+    "shadow_reference_object": null,
+    "shadow_length_ratio": null,
+    "sun_directly_visible": false,
+    "estimated_sun_elevation": null
+  },
+  "17_traffic_and_flow": {
+    "traffic_direction_vs_camera": null,
+    "is_one_way": false,
+    "vehicle_density": "empty",
+    "dominant_vehicle_type": null,
+    "ojol_visible": false
+  },
+  "geo_signals": {
+    "plate_prefix": null,
+    "plate_region": null,
+    "street_name": null,
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": null,
+    "city_district": null,
+    "province": null,
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": "lokal",
+    "road_lanes": 0,
+    "road_lanes_direction": 0,
+    "median_present": false,
+    "median_type": null,
+    "traffic_light_present": false,
+    "sidewalk_present": false,
+    "infrastructure_type": "normal_road",
+    "camera_heading": null,
+    "shadow_direction": null,
+    "time_of_day": null,
+    "visible_texts": [],
+    "poi_list": [],
+    "transjakarta_corridor": null,
+    "transjakarta_halte": null,
+    "bus_stop_visible": false,
+    "vegetation_type": null,
+    "commercial_density": "low",
+    "area_type": "residential",
+    "pln_pole_code": null,
+    "road_marking_color": null,
+    "manhole_brand": null,
+    "reflection_texts": [],
+    "rw_rt_sign": null,
+    "vegetation_species": [],
+    "shadow_length_ratio": null,
+    "traffic_direction": null
+  },
+  "image_metadata": {
+    "format": "PNG",
+    "size": "287x373"
+  },
+  "zone_analysis": {
+    "kiri_atas": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    },
+    "kanan_atas": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    },
+    "kiri_tengah": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    },
+    "kanan_tengah": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    },
+    "kiri_bawah": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    },
+    "kanan_bawah": {
+      "teks_ditemukan": [],
+      "kode_tiang_pln": null,
+      "plat_kendaraan": [],
+      "teks_refleksi_cermin": [],
+      "merek_gorong_gorong": null,
+      "warna_marka_jalan": null,
+      "jenis_lampu_jalan": null,
+      "estimasi_rasio_bayangan": null,
+      "papan_rt_rw_kelurahan": null,
+      "spesies_vegetasi": [],
+      "sinyal_tambahan": null
+    }
+  },
+  "image_path": "C:\\Users\\Engineer02\\Desktop\\Geocek\\geosignal\\uploads\\upload_b863ecdaa344414b91345309ecc2792f.jpg"
+}

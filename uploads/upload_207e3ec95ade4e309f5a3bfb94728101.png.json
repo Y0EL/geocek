@@ -1,0 +1,10 @@
+{
+  "geo_signals": {
+    "plate_prefix": "",
+    "landmark_sign": "",
+    "road_type": "Urban street with multiple lanes",
+    "road_lanes": 3,
+    "median_present": true,
+    "traffic_light_present": true
+  }
+}

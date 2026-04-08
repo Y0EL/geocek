@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geocek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --clahe-red: #E24A4A;
+            --clahe-bg: #F9F7F5;
+            --clahe-text: #2D2D2D;
+            --clahe-border: #E5E1DE;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: var(--clahe-bg);
+            color: var(--clahe-text);
+        }
+
+        .custom-shadow {
+            box-shadow: 0 4px 20px -2px rgba(226, 74, 74, 0.08);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6">
+    <div
+        class="max-w-md w-full bg-white rounded-3xl border border-[var(--clahe-border)] p-10 text-center custom-shadow">
+        <div
+            class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mx-auto mb-8 border border-red-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="var(--clahe-red)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+        </div>
+
+        <h1 class="text-2xl font-bold mb-4 tracking-tight">Security Alert: Fake Media Detected</h1>
+
+        <p class="text-stone-500 mb-8 leading-relaxed">
+            Sistem deteksi otomatis telah menolak media ini. Gambar terdeteksi sebagai <b>konten buatan AI</b> atau
+            deepfake. Engine ini hanya memproses foto dan video asli untuk validasi geolocation.
+        </p>
+
+        <div class="space-y-3">
+            <a href="/"
+                class="block w-full py-4 px-6 bg-[var(--clahe-red)] text-white rounded-2xl font-bold text-sm tracking-wide hover:opacity-90 transition-all custom-shadow">
+                Upload Authentic Image
+            </a>
+            <p class="text-[10px] text-stone-400 font-medium uppercase tracking-[0.2em]">Anti-Poisoning Layer Active</p>
+        </div>
+    </div>
+</body>
+
+</html>

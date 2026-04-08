@@ -1,0 +1,118 @@
+{
+  "extraction_timestamp": "2026-04-08T15:00:00Z",
+  "image_hash_note": "Manual LVM extraction \u2014 no EXIF available from upload",
+  "1_media_and_capture_metadata": {
+    "capture_method": "Mobile device, street-level shot",
+    "camera_orientation": "Horizontal (landscape)",
+    "frame_composition": "Street scene with buildings, trees, and road in foreground",
+    "estimated_focal_length": "Normal (~24-35mm equivalent)",
+    "image_quality": "High",
+    "motion_blur_present": false,
+    "motion_blur_location": "",
+    "lens_distortion": false,
+    "chromatic_aberration": "",
+    "image_stabilization_effect": "",
+    "aspect_ratio": "16:9",
+    "bokeh_present": false,
+    "overexposed_regions": false,
+    "underexposed_regions": false
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "Late morning to early afternoon",
+    "time_estimation_range": "Between 10:00 AM and 2:00 PM",
+    "time_confidence": "High",
+    "time_reasoning": "Strong sunlight, shadows short, clear sky",
+    "weather_condition": "Clear, sunny",
+    "weather_confidence": "High",
+    "weather_reasoning": "Bright sunlight with no clouds or precipitation",
+    "ground_wetness": "Dry",
+    "visibility_level": "Excellent",
+    "air_quality_visual": "Moderate (urban environment, no smog or haze)",
+    "overall_lighting_temperature": "Warm daylight",
+    "ambient_light_sources": [
+      "Sunlight"
+    ]
+  },
+  "3_geolocation_signals": {
+    "country_inference": "Indonesia",
+    "country_confidence": "High",
+    "region_inference": "Jakarta",
+    "region_confidence": "High",
+    "province_guess": "DKI Jakarta",
+    "city_area_guess": "Central Jakarta",
+    "city_confidence": "High",
+    "geo_signal_1_plate": {
+      "signal": "B 1234 AB",
+      "meaning": "Indonesian license plate",
+      "weight": "High"
+    },
+    "geo_signal_2_landmark": {
+      "signal": "Pluit",
+      "meaning": "Local neighborhood or district",
+      "weight": "Medium",
+      "confidence": "Medium"
+    },
+    "geo_signal_3_road": {
+      "signal": "Jalan Pluit Selatan Raya",
+      "meaning": "Street name",
+      "weight": "High"
+    },
+    "coordinate_estimate": {
+      "latitude": -6.1185,
+      "longitude": 106.785
+    }
+  },
+  "4_road_and_infrastructure": {
+    "road_surface_material": "Asphalt",
+    "road_condition": "Good, well-maintained",
+    "road_width_estimation": "Two lanes in each direction",
+    "road_type": "Main arterial road",
+    "road_marking_visible": "Center line, edge lines",
+    "median_present": false,
+    "median_type": "N/A",
+    "median_material": "N/A",
+    "median_condition": "N/A",
+    "median_width_estimation": "N/A",
+    "sidewalk_present": true,
+    "traffic_light_present": true,
+    "traffic_light_status": "Operational",
+    "traffic_light_type": "Standard traffic signals",
+    "overhead_wires": true,
+    "street_lighting_poles": true,
+    "drainage_visible": false
+  },
+  "5_traffic_and_scene_context": {
+    "traffic_density": "Moderate, some cars parked and moving"
+  },
+  "6_primary_vehicle_subject": {
+    "vehicle_type": "Motorcycle",
+    "license_plate": {
+      "visible": true,
+      "plate_prefix": "B",
+      "plate_full_text_guess": "B 1234 AB"
+    }
+  },
+  "7_rider_subject": {
+    "helmet_type": "Full-face helmet"
+  },
+  "8_background_vehicles": {
+    "type_inference": "Cars and motorcycles, typical urban street scene"
+  },
+  "9_signage_and_ocr": {
+    "sign_1": {
+      "text_raw": "Jalan Pluit Selatan Raya",
+      "text_full_guess": "Jalan Pluit Selatan Raya",
+      "sign_type": "Street name sign"
+    }
+  },
+  "10_structural_image_analysis": {},
+  "11_osint_summary": {},
+  "geo_signals": {
+    "plate_prefix": "B",
+    "landmark_sign": "Pluit",
+    "road_type": "Main arterial road",
+    "road_lanes": 4,
+    "median_present": false,
+    "traffic_light_present": true
+  }
+}

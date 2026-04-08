@@ -1,0 +1,118 @@
+{
+  "extraction_timestamp": "2026-04-08T12:00:00Z",
+  "image_hash_note": "Manual LVM extraction \u2014 no EXIF available from upload",
+  "1_media_and_capture_metadata": {
+    "capture_method": "Photograph taken with smartphone from street level",
+    "camera_orientation": "Horizontal (landscape)",
+    "frame_composition": "Street scene with sidewalk, buildings, and moving traffic",
+    "estimated_focal_length": "Normal (~35mm equivalent)",
+    "image_quality": "High",
+    "motion_blur_present": false,
+    "motion_blur_location": "",
+    "lens_distortion": false,
+    "chromatic_aberration": "Minimal",
+    "image_stabilization_effect": "None",
+    "aspect_ratio": "16:9",
+    "bokeh_present": false,
+    "overexposed_regions": "None",
+    "underexposed_regions": "None"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "Midday",
+    "time_estimation_range": "11:30 AM to 1:00 PM",
+    "time_confidence": "High",
+    "time_reasoning": "Bright sunlight with shadows indicating midday sun",
+    "weather_condition": "Clear sky, sunny",
+    "weather_confidence": "High",
+    "weather_reasoning": "Bright lighting, no clouds or precipitation visible",
+    "ground_wetness": "Dry",
+    "visibility_level": "Excellent, no haze or fog",
+    "air_quality_visual": "Good, no visible pollution or smog",
+    "overall_lighting_temperature": "Warm daylight",
+    "ambient_light_sources": [
+      "Sunlight"
+    ]
+  },
+  "3_geolocation_signals": {
+    "country_inference": "Thailand",
+    "country_confidence": "High",
+    "region_inference": "Bangkok Metropolitan Area",
+    "region_confidence": "Medium",
+    "province_guess": "Bangkok",
+    "city_area_guess": "Central Business District",
+    "city_confidence": "Medium",
+    "geo_signal_1_plate": {
+      "signal": "Thai license plate visible on vehicle",
+      "meaning": "Vehicle registered in Thailand",
+      "weight": "High"
+    },
+    "geo_signal_2_landmark": {
+      "signal": "High-rise buildings typical of Bangkok skyline",
+      "meaning": "Urban commercial district",
+      "weight": "Medium",
+      "confidence": "Medium"
+    },
+    "geo_signal_3_road": {
+      "signal": "Street name painted on road: 'J. Putra Street'",
+      "meaning": "Street identified as J. Putra Street",
+      "weight": "High"
+    },
+    "coordinate_estimate": {
+      "latitude": 13.75,
+      "longitude": 100.52
+    }
+  },
+  "4_road_and_infrastructure": {
+    "road_surface_material": "Asphalt",
+    "road_condition": "Good, smooth",
+    "road_width_estimation": "2 lanes per direction",
+    "road_type": "Urban arterial road",
+    "road_marking_visible": "Yes, lane dividers and directional arrows",
+    "median_present": false,
+    "median_type": "None",
+    "median_material": "N/A",
+    "median_condition": "N/A",
+    "median_width_estimation": "N/A",
+    "sidewalk_present": true,
+    "traffic_light_present": true,
+    "traffic_light_status": "Green light for straight traffic",
+    "traffic_light_type": "Standard overhead traffic signals",
+    "overhead_wires": "Overhead electrical and telecommunication wires",
+    "street_lighting_poles": "Present along sidewalk",
+    "drainage_visible": true
+  },
+  "5_traffic_and_scene_context": {
+    "traffic_density": "Moderate, several vehicles in motion"
+  },
+  "6_primary_vehicle_subject": {
+    "vehicle_type": "Motorcycle",
+    "license_plate": {
+      "visible": true,
+      "plate_prefix": "\u0e01\u0e17\u0e21",
+      "plate_full_text_guess": "\u0e01\u0e17\u0e21 1234"
+    }
+  },
+  "7_rider_subject": {
+    "helmet_type": "Full-face helmet"
+  },
+  "8_background_vehicles": {
+    "type_inference": "Sedans, SUVs"
+  },
+  "9_signage_and_ocr": {
+    "sign_1": {
+      "text_raw": "J. Putra Street",
+      "text_full_guess": "J. Putra Street",
+      "sign_type": "Street name sign"
+    }
+  },
+  "10_structural_image_analysis": {},
+  "11_osint_summary": {},
+  "geo_signals": {
+    "plate_prefix": "\u0e01\u0e17\u0e21",
+    "landmark_sign": "Bangkok skyline with high-rise buildings",
+    "road_type": "Urban arterial road",
+    "road_lanes": 4,
+    "median_present": false,
+    "traffic_light_present": true
+  }
+}

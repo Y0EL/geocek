@@ -1,0 +1,47 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "urban street scene with buildings, greenery, and road"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "daytime",
+    "weather": "clear with no precipitation",
+    "lighting": "natural daylight"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "region_guess": "Jakarta",
+    "city_guess": "Jakarta",
+    "primary_landmark": "Jalan Pluit Selatan",
+    "signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jalan Pluit Selatan",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "lanes": 4,
+    "median": true
+  },
+  "5_primary_subject": {
+    "vehicle_type": "car",
+    "plate_prefix": "B"
+  },
+  "9_signage_and_ocr": {
+    "texts_detected": [
+      "Jalan Pluit Selatan"
+    ]
+  },
+  "11_agent_reasoning": "Visible street sign confirming Jakarta location, supported by the plate prefix 'B' which is typical for vehicles registered in Jakarta. Urban environment with high-rise buildings and tropical vegetation consistent with Jakarta cityscape.",
+  "geo_signals": {
+    "plate_prefix": "B",
+    "landmark_sign": "Jalan Pluit Selatan",
+    "road_type": "arteri_primer",
+    "road_lanes": 4,
+    "median_present": true,
+    "traffic_light_present": false
+  }
+}

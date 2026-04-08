@@ -1,0 +1,462 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "midday",
+    "weather": "clear",
+    "lighting": "harsh_sun",
+    "shadow_direction": "SE",
+    "camera_heading": "N"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": "DKI Jakarta",
+    "city": "Jakarta Barat",
+    "district_kecamatan": "",
+    "subdistrict_kelurahan": "",
+    "primary_street_name": "Jl. Daan Mogot",
+    "secondary_street_name": "",
+    "junction_name": "",
+    "confidence_signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jl. Daan Mogot",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "total_lanes": 4,
+    "lanes_per_direction": 2,
+    "median_present": true,
+    "median_type": "concrete_barrier",
+    "road_markings": [
+      "center_line",
+      "lane_divider"
+    ],
+    "road_condition": "good",
+    "sidewalk_present": true,
+    "sidewalk_type": "paving_block",
+    "overhead_cables": true,
+    "utility_poles": "concrete",
+    "drainage_type": "open_ditch"
+  },
+  "5_primary_subject": {
+    "vehicle_type": "motorcycle",
+    "vehicle_brand": "",
+    "plate_text": "",
+    "plate_prefix": "",
+    "plate_region": ""
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": "",
+    "water_body_type": ""
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "mixed",
+    "commercial_density": "medium",
+    "building_density": "medium",
+    "vegetation_density": "medium",
+    "vegetation_type": "urban_sparse"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [
+      "Jl. Daan Mogot"
+    ],
+    "street_signs": [
+      "Jl. Daan Mogot"
+    ],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "The image shows a street-level view with a visible street sign 'Jl. Daan Mogot', indicating the location is likely in Jakarta Barat, DKI Jakarta. The presence of multiple lanes and concrete barriers suggests a major road. The midday lighting and clear weather conditions are typical for this region.",
+  "geo_signals": {
+    "plate_prefix": null,
+    "plate_region": null,
+    "street_name": null,
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": null,
+    "city_district": null,
+    "province": null,
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": null,
+    "road_lanes": null,
+    "road_lanes_direction": 2,
+    "median_present": true,
+    "median_type": "concrete_barrier",
+    "traffic_light_present": false,
+    "sidewalk_present": true,
+    "infrastructure_type": "normal_road",
+    "camera_heading": "N",
+    "shadow_direction": "SE",
+    "time_of_day": "midday",
+    "visible_texts": null,
+    "poi_list": [],
+    "transjakarta_corridor": null,
+    "transjakarta_halte": null,
+    "bus_stop_visible": false,
+    "vegetation_type": "urban_sparse",
+    "commercial_density": "medium",
+    "area_type": "mixed"
+  },
+  "image_path": "C:\\Users\\Engineer02\\Desktop\\Geocek\\geosignal\\uploads\\upload_9ed0c1d77a7640c3bae2ff41af69a82e.jpg",
+  "multicheck": {
+    "multicheckVersion": "1.0.0",
+    "timestampMs": 1775640781193,
+    "cp1": {
+      "passed": true,
+      "runs": [
+        {
+          "runIndex": 1,
+          "signals": {
+            "plate_prefix": null,
+            "plate_region": null,
+            "street_name": "Jalan Beji Murni",
+            "cross_street": null,
+            "junction_name": null,
+            "area_name": null,
+            "city_district": null,
+            "province": null,
+            "landmark_sign": null,
+            "landmark_type": null,
+            "water_body_visible": false,
+            "waterway_name": null,
+            "waterway_type": null,
+            "road_type": "main road",
+            "road_lanes": null,
+            "road_lanes_direction": null,
+            "median_present": true,
+            "median_type": "strip",
+            "traffic_light_present": false,
+            "sidewalk_present": true,
+            "infrastructure_type": "urban street",
+            "camera_heading": null,
+            "shadow_direction": null,
+            "time_of_day": "day",
+            "visible_texts": [
+              "Jalan Beji Murni"
+            ],
+            "poi_list": [],
+            "transjakarta_corridor": null,
+            "transjakarta_halte": null,
+            "bus_stop_visible": false,
+            "vegetation_type": "urban trees",
+            "commercial_density": null,
+            "area_type": "urban"
+          },
+          "durationMs": 3630
+        }
+      ],
+      "votes": [
+        {
+          "field": "plate_prefix",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "plate_region",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "street_name",
+          "values": [
+            "jl. daan mogot",
+            "jalan beji murni"
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "cross_street",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "junction_name",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "area_name",
+          "values": [
+            "jakarta barat",
+            null
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "city_district",
+          "values": [
+            "jakarta barat",
+            null
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "province",
+          "values": [
+            "dki jakarta",
+            null
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "landmark_sign",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "landmark_type",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "waterway_name",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "road_type",
+          "values": [
+            "arteri_primer",
+            "main road"
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "road_lanes",
+          "values": [
+            4,
+            null
+          ],
+          "agreementCount": 1,
+          "passed": false,
+          "confidenceMult": 0.3
+        },
+        {
+          "field": "transjakarta_corridor",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "transjakarta_halte",
+          "values": [
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 2,
+          "passed": true,
+          "confidenceMult": 1
+        }
+      ],
+      "consensusSignals": {
+        "plate_prefix": null,
+        "plate_region": null,
+        "street_name": null,
+        "cross_street": null,
+        "junction_name": null,
+        "area_name": null,
+        "city_district": null,
+        "province": null,
+        "landmark_sign": null,
+        "landmark_type": null,
+        "water_body_visible": false,
+        "waterway_name": null,
+        "waterway_type": null,
+        "road_type": null,
+        "road_lanes": null,
+        "road_lanes_direction": 2,
+        "median_present": true,
+        "median_type": "concrete_barrier",
+        "traffic_light_present": false,
+        "sidewalk_present": true,
+        "infrastructure_type": "normal_road",
+        "camera_heading": "N",
+        "shadow_direction": "SE",
+        "time_of_day": "midday",
+        "visible_texts": [
+          "Jl. Daan Mogot"
+        ],
+        "poi_list": [],
+        "transjakarta_corridor": null,
+        "transjakarta_halte": null,
+        "bus_stop_visible": false,
+        "vegetation_type": "urban_sparse",
+        "commercial_density": "medium",
+        "area_type": "mixed"
+      },
+      "rejectedFields": [
+        "street_name",
+        "area_name",
+        "city_district",
+        "province",
+        "road_type",
+        "road_lanes"
+      ],
+      "durationMs": 13336
+    },
+    "cp2": {
+      "passed": false,
+      "coherentSignals": [],
+      "flaggedSignals": [
+        "visible_texts"
+      ],
+      "issues": [
+        {
+          "kind": "PROVINCE_CITY_MISMATCH",
+          "signal": "visible_texts",
+          "detail": "Jl. Daan Mogot is in Jakarta, but no province or city is specified.",
+          "severity": "HARD"
+        }
+      ],
+      "adjustedWeights": {
+        "visible_texts": 0
+      },
+      "durationMs": 2290
+    },
+    "cp3": null,
+    "cp4": {
+      "passed": true,
+      "checkpointsPassed": 1,
+      "hallucinationRisk": "MEDIUM",
+      "hallucinationScore": 0.315,
+      "consistentSignals": [],
+      "contradictorySignals": [
+        "visible_texts",
+        "street_name",
+        "area_name",
+        "city_district",
+        "province",
+        "road_type",
+        "road_lanes"
+      ],
+      "recommendation": "PROCEED_WITH_CAUTION"
+    },
+    "verifiedGeoSignals": {
+      "plate_prefix": null,
+      "plate_region": null,
+      "street_name": null,
+      "cross_street": null,
+      "junction_name": null,
+      "area_name": null,
+      "city_district": null,
+      "province": null,
+      "landmark_sign": null,
+      "landmark_type": null,
+      "water_body_visible": false,
+      "waterway_name": null,
+      "waterway_type": null,
+      "road_type": null,
+      "road_lanes": null,
+      "road_lanes_direction": 2,
+      "median_present": true,
+      "median_type": "concrete_barrier",
+      "traffic_light_present": false,
+      "sidewalk_present": true,
+      "infrastructure_type": "normal_road",
+      "camera_heading": "N",
+      "shadow_direction": "SE",
+      "time_of_day": "midday",
+      "visible_texts": null,
+      "poi_list": [],
+      "transjakarta_corridor": null,
+      "transjakarta_halte": null,
+      "bus_stop_visible": false,
+      "vegetation_type": "urban_sparse",
+      "commercial_density": "medium",
+      "area_type": "mixed"
+    },
+    "candidateMultipliers": {},
+    "totalDurationMs": 15638
+  }
+}

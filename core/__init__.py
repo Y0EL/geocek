@@ -1,0 +1,1 @@
+# GeoSignal Core Package

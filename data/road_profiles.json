@@ -1,0 +1,8 @@
+{
+  "Jakarta": {
+    "arteri_primer": ["primary", "trunk"],
+    "arteri_sekunder": ["secondary"],
+    "tol": ["motorway"],
+    "lingkungan": ["residential", "tertiary"]
+  }
+}

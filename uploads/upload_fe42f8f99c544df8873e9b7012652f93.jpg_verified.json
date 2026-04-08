@@ -1,0 +1,583 @@
+{
+  "1_media_metadata": {
+    "quality": "high",
+    "composition": "street_level",
+    "image_type": "photo"
+  },
+  "2_temporal_and_environmental": {
+    "time_of_day": "midday",
+    "weather": "clear",
+    "lighting": "harsh_sun",
+    "shadow_direction": "W",
+    "camera_heading": "S"
+  },
+  "3_geolocation_signals": {
+    "country": "Indonesia",
+    "province": "DKI Jakarta",
+    "city": "Jakarta",
+    "district_kecamatan": "Pasar Minggu",
+    "subdistrict_kelurahan": null,
+    "primary_street_name": "Jl. Siaga Raya",
+    "secondary_street_name": null,
+    "junction_name": null,
+    "confidence_signals": [
+      {
+        "name": "Street Sign",
+        "value": "Jl. Siaga Raya",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "4_road_infrastructure": {
+    "surface": "asphalt",
+    "total_lanes": 2,
+    "lanes_per_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "road_markings": [
+      "center_line"
+    ],
+    "road_condition": "good",
+    "sidewalk_present": true,
+    "sidewalk_type": "paving_block",
+    "overhead_cables": true,
+    "utility_poles": "wooden",
+    "drainage_type": "covered"
+  },
+  "5_primary_subject": {
+    "vehicle_type": "motorcycle",
+    "vehicle_brand": "",
+    "plate_text": "",
+    "plate_prefix": null,
+    "plate_region": null
+  },
+  "6_infrastructure_special": {
+    "type": "normal_road",
+    "water_body_visible": false,
+    "water_body_name": null,
+    "water_body_type": null
+  },
+  "7_points_of_interest": {
+    "visible_business_names": [],
+    "visible_bank_names": [],
+    "visible_chain_stores": [],
+    "healthcare_facilities": [],
+    "religious_buildings": [],
+    "government_buildings": [],
+    "educational_institutions": [],
+    "transit_facilities": []
+  },
+  "8_area_classification": {
+    "area_type": "residential",
+    "commercial_density": "low",
+    "building_density": "medium",
+    "vegetation_density": "medium",
+    "vegetation_type": "urban_sparse"
+  },
+  "9_signage_and_ocr": {
+    "all_detected_texts": [
+      "Jl. Siaga Raya"
+    ],
+    "street_signs": [
+      "Jl. Siaga Raya"
+    ],
+    "business_signs": [],
+    "government_signs": [],
+    "transit_signs": [],
+    "warning_signs": []
+  },
+  "10_transit_indicators": {
+    "transjakarta_visible": false,
+    "transjakarta_corridor": null,
+    "transjakarta_halte_name": null,
+    "bus_stop_visible": false,
+    "rail_track_visible": false,
+    "toll_road_indicator": false
+  },
+  "11_agent_reasoning": "The image clearly depicts a street scene along Jl. Siaga Raya in Pasar Minggu, Jakarta, based on the visible street sign. The presence of utility poles, motorbikes, and specific urban infrastructure supports this location inference. The scene's environmental conditions (midday, clear weather, harsh sunlight) and infrastructure details (paving sidewalks, overhead cables) are consistent with a typical Jakarta residential street environment.",
+  "geo_signals": {
+    "plate_prefix": null,
+    "plate_region": null,
+    "street_name": "jalan beji murni",
+    "cross_street": null,
+    "junction_name": null,
+    "area_name": null,
+    "city_district": null,
+    "province": null,
+    "landmark_sign": null,
+    "landmark_type": null,
+    "water_body_visible": false,
+    "waterway_name": null,
+    "waterway_type": null,
+    "road_type": "main road",
+    "road_lanes": null,
+    "road_lanes_direction": 1,
+    "median_present": false,
+    "median_type": null,
+    "traffic_light_present": false,
+    "sidewalk_present": true,
+    "infrastructure_type": "normal_road",
+    "camera_heading": "S",
+    "shadow_direction": "W",
+    "time_of_day": "midday",
+    "visible_texts": [
+      "Jl. Siaga Raya"
+    ],
+    "poi_list": [],
+    "transjakarta_corridor": null,
+    "transjakarta_halte": null,
+    "bus_stop_visible": false,
+    "vegetation_type": "urban_sparse",
+    "commercial_density": "low",
+    "area_type": "residential"
+  },
+  "image_path": "C:\\Users\\Engineer02\\Desktop\\Geocek\\geosignal\\uploads\\upload_fe42f8f99c544df8873e9b7012652f93.jpg",
+  "multicheck": {
+    "multicheckVersion": "1.0.0",
+    "timestampMs": 1775637757830,
+    "cp1": {
+      "passed": true,
+      "runs": [
+        {
+          "runIndex": 0,
+          "signals": {
+            "plate_prefix": null,
+            "plate_region": null,
+            "street_name": "Jalan Beji Murni",
+            "cross_street": null,
+            "junction_name": null,
+            "area_name": null,
+            "city_district": null,
+            "province": null,
+            "landmark_sign": null,
+            "landmark_type": null,
+            "water_body_visible": false,
+            "waterway_name": null,
+            "waterway_type": null,
+            "road_type": "main road",
+            "road_lanes": null,
+            "road_lanes_direction": null,
+            "median_present": true,
+            "median_type": "strip",
+            "traffic_light_present": false,
+            "sidewalk_present": true,
+            "infrastructure_type": "urban street",
+            "camera_heading": null,
+            "shadow_direction": null,
+            "time_of_day": "day",
+            "visible_texts": [
+              "Jalan Beji Murni"
+            ],
+            "poi_list": [],
+            "transjakarta_corridor": null,
+            "transjakarta_halte": null,
+            "bus_stop_visible": false,
+            "vegetation_type": "urban trees",
+            "commercial_density": null,
+            "area_type": "urban"
+          },
+          "durationMs": 7787
+        },
+        {
+          "runIndex": 1,
+          "signals": {
+            "plate_prefix": null,
+            "plate_region": null,
+            "street_name": "Jalan Beji Murni",
+            "cross_street": null,
+            "junction_name": null,
+            "area_name": null,
+            "city_district": null,
+            "province": null,
+            "landmark_sign": null,
+            "landmark_type": null,
+            "water_body_visible": false,
+            "waterway_name": null,
+            "waterway_type": null,
+            "road_type": "main road",
+            "road_lanes": null,
+            "road_lanes_direction": null,
+            "median_present": true,
+            "median_type": null,
+            "traffic_light_present": false,
+            "sidewalk_present": true,
+            "infrastructure_type": "road",
+            "camera_heading": null,
+            "shadow_direction": null,
+            "time_of_day": "day",
+            "visible_texts": [
+              "Jalan Beji Murni"
+            ],
+            "poi_list": [],
+            "transjakarta_corridor": null,
+            "transjakarta_halte": null,
+            "bus_stop_visible": false,
+            "vegetation_type": "urban trees",
+            "commercial_density": null,
+            "area_type": "urban"
+          },
+          "durationMs": 7764
+        },
+        {
+          "runIndex": 2,
+          "signals": {
+            "plate_prefix": null,
+            "plate_region": null,
+            "street_name": "Jalan Beji Murni",
+            "cross_street": null,
+            "junction_name": null,
+            "area_name": null,
+            "city_district": null,
+            "province": null,
+            "landmark_sign": null,
+            "landmark_type": null,
+            "water_body_visible": false,
+            "waterway_name": null,
+            "waterway_type": null,
+            "road_type": "main road",
+            "road_lanes": null,
+            "road_lanes_direction": null,
+            "median_present": true,
+            "median_type": "strip",
+            "traffic_light_present": false,
+            "sidewalk_present": true,
+            "infrastructure_type": "urban street",
+            "camera_heading": null,
+            "shadow_direction": null,
+            "time_of_day": "daytime",
+            "visible_texts": [
+              "Jalan Beji Murni"
+            ],
+            "poi_list": [],
+            "transjakarta_corridor": null,
+            "transjakarta_halte": null,
+            "bus_stop_visible": false,
+            "vegetation_type": "urban trees",
+            "commercial_density": null,
+            "area_type": "urban"
+          },
+          "durationMs": 8213
+        }
+      ],
+      "votes": [
+        {
+          "field": "plate_prefix",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "plate_region",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "street_name",
+          "values": [
+            "jl. siaga raya",
+            "jalan beji murni",
+            "jalan beji murni",
+            "jalan beji murni"
+          ],
+          "agreedValue": "jalan beji murni",
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "cross_street",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "junction_name",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "area_name",
+          "values": [
+            "pasar minggu",
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "city_district",
+          "values": [
+            "pasar minggu",
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "province",
+          "values": [
+            "dki jakarta",
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "landmark_sign",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "landmark_type",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "waterway_name",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "road_type",
+          "values": [
+            "arteri_sekunder",
+            "main road",
+            "main road",
+            "main road"
+          ],
+          "agreedValue": "main road",
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "road_lanes",
+          "values": [
+            2,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 3,
+          "passed": true,
+          "confidenceMult": 0.8
+        },
+        {
+          "field": "transjakarta_corridor",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        },
+        {
+          "field": "transjakarta_halte",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "agreedValue": null,
+          "agreementCount": 4,
+          "passed": true,
+          "confidenceMult": 1
+        }
+      ],
+      "consensusSignals": {
+        "plate_prefix": null,
+        "plate_region": null,
+        "street_name": "jalan beji murni",
+        "cross_street": null,
+        "junction_name": null,
+        "area_name": null,
+        "city_district": null,
+        "province": null,
+        "landmark_sign": null,
+        "landmark_type": null,
+        "water_body_visible": false,
+        "waterway_name": null,
+        "waterway_type": null,
+        "road_type": "main road",
+        "road_lanes": null,
+        "road_lanes_direction": 1,
+        "median_present": false,
+        "median_type": null,
+        "traffic_light_present": false,
+        "sidewalk_present": true,
+        "infrastructure_type": "normal_road",
+        "camera_heading": "S",
+        "shadow_direction": "W",
+        "time_of_day": "midday",
+        "visible_texts": [
+          "Jl. Siaga Raya"
+        ],
+        "poi_list": [],
+        "transjakarta_corridor": null,
+        "transjakarta_halte": null,
+        "bus_stop_visible": false,
+        "vegetation_type": "urban_sparse",
+        "commercial_density": "low",
+        "area_type": "residential"
+      },
+      "rejectedFields": [],
+      "durationMs": 8220
+    },
+    "cp2": {
+      "passed": true,
+      "coherentSignals": [
+        "street_name",
+        "road_type",
+        "road_lanes_direction",
+        "median_present",
+        "sidewalk_present",
+        "infrastructure_type",
+        "camera_heading",
+        "shadow_direction",
+        "time_of_day",
+        "visible_texts",
+        "vegetation_type",
+        "commercial_density",
+        "area_type"
+      ],
+      "flaggedSignals": [],
+      "issues": [],
+      "adjustedWeights": {},
+      "durationMs": 3034
+    },
+    "cp3": null,
+    "cp4": {
+      "passed": true,
+      "checkpointsPassed": 2,
+      "hallucinationRisk": "LOW",
+      "hallucinationScore": 0,
+      "consistentSignals": [
+        "street_name",
+        "road_type",
+        "road_lanes_direction",
+        "median_present",
+        "sidewalk_present",
+        "infrastructure_type",
+        "camera_heading",
+        "shadow_direction",
+        "time_of_day",
+        "visible_texts",
+        "vegetation_type",
+        "commercial_density",
+        "area_type"
+      ],
+      "contradictorySignals": [],
+      "recommendation": "PROCEED"
+    },
+    "verifiedGeoSignals": {
+      "plate_prefix": null,
+      "plate_region": null,
+      "street_name": "jalan beji murni",
+      "cross_street": null,
+      "junction_name": null,
+      "area_name": null,
+      "city_district": null,
+      "province": null,
+      "landmark_sign": null,
+      "landmark_type": null,
+      "water_body_visible": false,
+      "waterway_name": null,
+      "waterway_type": null,
+      "road_type": "main road",
+      "road_lanes": null,
+      "road_lanes_direction": 1,
+      "median_present": false,
+      "median_type": null,
+      "traffic_light_present": false,
+      "sidewalk_present": true,
+      "infrastructure_type": "normal_road",
+      "camera_heading": "S",
+      "shadow_direction": "W",
+      "time_of_day": "midday",
+      "visible_texts": [
+        "Jl. Siaga Raya"
+      ],
+      "poi_list": [],
+      "transjakarta_corridor": null,
+      "transjakarta_halte": null,
+      "bus_stop_visible": false,
+      "vegetation_type": "urban_sparse",
+      "commercial_density": "low",
+      "area_type": "residential"
+    },
+    "candidateMultipliers": {},
+    "totalDurationMs": 11260
+  }
+}
