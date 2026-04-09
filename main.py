@@ -28,7 +28,7 @@ load_dotenv()
               help='Tampilkan detail proses')
 def main(input, format, output_dir, verbose):
     """
-    GeoSignal — OSINT Visual Signal to Coordinate Engine
+    Geocek — OSINT Visual Signal to Coordinate Engine
     """
     start_time = time.time()
 
@@ -42,9 +42,9 @@ def main(input, format, output_dir, verbose):
 
         if verbose: click.echo(f"[*] Processing case: {input_data.get('case_id', 'Unknown')}")
 
-        # 2. Parse Signals — gunakan verifiedGeoSignals dari multicheck jika ada
+        # 2. Parse Signals — gunakan verifiedGeocekSignals dari multicheck jika ada
         multicheck_data = input_data.get("multicheck", {})
-        verified_signals = multicheck_data.get("verifiedGeoSignals")
+        verified_signals = multicheck_data.get("verifiedGeocekSignals")
         mc_weight_overrides = multicheck_data.get("cp2", {}).get("adjustedWeights", {})
         mc_candidate_mults  = multicheck_data.get("candidateMultipliers", {})
         mc_recommendation   = multicheck_data.get("cp4", {}).get("recommendation", "PROCEED")
@@ -134,6 +134,15 @@ def main(input, format, output_dir, verbose):
                 "text":     bundle.text_queries,
             }
             mapbox_results = query_engine.search_all(mapbox_groups, bbox_str)
+            
+            # ── [NEW] Proximity Cluster Search
+            # Jika ada proximity indicator (misal: "Kantor Pos") dan POI lain (misal: "Comet")
+            if bundle.proximity_indicators and bundle.poi_queries:
+                for px in bundle.proximity_indicators:
+                    for poi in bundle.poi_queries[:2]:
+                        p_results = query_engine.search_proximity_cluster(poi, px, bbox_str)
+                        mapbox_results.extend(p_results)
+
             # Deduplicate vs nominatim results
             seen_coords = {(round(c["lat"], 3), round(c["lon"], 3)) for c in candidates}
             for r in mapbox_results:

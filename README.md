@@ -1,6 +1,6 @@
-# 🛰️ GeoSignal — OSINT Visual Signal-to-Coordinate Engine
+# 🛰️ Geocek — OSINT Visual Signal-to-Coordinate Engine
 
-GeoSignal is a specialized tool for open-source intelligence (OSINT) research, designed to geolocate images based on visual cues such as license plates, road signage, infrastructure, and road layouts.
+Geocek is a specialized tool for open-source intelligence (OSINT) research, designed to geolocate images based on visual cues such as license plates, road signage, infrastructure, and road layouts.
 
 It employs a **Constraint-Intersection Geolocation** methodology, utilizing public OpenStreetMap (OSM) data via the Overpass API and Nominatim.
 

@@ -1,1 +1,1 @@
-# GeoSignal Core Package
+# Geocek Core Package

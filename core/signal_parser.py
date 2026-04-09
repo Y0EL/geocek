@@ -15,6 +15,9 @@ class SignalBundle:
     infrastructure: Dict = field(default_factory=dict)
     signal_weights: Dict = field(default_factory=dict)
     confidence_initial: float = 0.0
+    building_number: Optional[str] = None
+    commercial_slogan: Optional[str] = None
+    proximity_indicators: List[str] = field(default_factory=list)
 
 class SignalParser:
     def __init__(self, data_dir: str = "data"):
@@ -124,13 +127,29 @@ class SignalParser:
         elif transjakarta_corridor:
             bundle.poi_queries.insert(0, f"Transjakarta Koridor {transjakarta_corridor}")
 
-        # 8. Area context for BBox refinement
         bundle.area_context = {
             "area_name": area_name,
             "city_district": city_district,
             "province": province,
             "waterway_name": waterway_name,
         }
+
+        # 8b. Building number & slogans
+        bundle.building_number = geo.get("building_number")
+        bundle.commercial_slogan = geo.get("commercial_slogan")
+        bundle.proximity_indicators = geo.get("proximity_indicators", [])
+
+        # 8c. Enhanced POI queries with building number & slogan
+        if bundle.building_number:
+            for poi in bundle.poi_queries[:2]: # only first 2 for brevity
+                if area_name:
+                    bundle.poi_queries.append(f"{poi} {bundle.building_number}, {area_name}")
+                bundle.poi_queries.append(f"{poi} {bundle.building_number}")
+        
+        if bundle.commercial_slogan:
+            bundle.poi_queries.append(bundle.commercial_slogan)
+            if area_name:
+                bundle.poi_queries.append(f"{bundle.commercial_slogan}, {area_name}")
 
         # 9. Road constraints
         bundle.road_constraints = self.build_road_filter(
@@ -152,6 +171,9 @@ class SignalParser:
             "commercial_density": geo.get("commercial_density"),
             "area_type": geo.get("area_type"),
             "transjakarta_corridor": transjakarta_corridor,
+            "building_number": bundle.building_number,
+            "commercial_slogan": bundle.commercial_slogan,
+            "proximity_indicators": bundle.proximity_indicators
         }
 
         # 11. Weights — more signals = higher confidence
@@ -248,5 +270,13 @@ class SignalParser:
             weights["vegetation_species"] = 0.35
         if geo.get("shadow_length_ratio"):
             weights["shadow_ratio"] = 0.30     # estimasi lintang dari bayangan
+        
+        # Tier 6: High-precision details
+        if geo.get("building_number"):
+            weights["building_number"] = 0.85
+        if geo.get("commercial_slogan"):
+            weights["slogan"] = 0.60
+        if geo.get("proximity_indicators"):
+            weights["proximity"] = 0.80
 
         return weights

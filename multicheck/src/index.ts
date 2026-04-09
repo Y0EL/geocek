@@ -117,7 +117,7 @@ async function main(): Promise<void> {
     cp2,
     cp3,
     cp4,
-    verifiedGeoSignals:   verifiedSignals,
+    verifiedGeocekSignals:   verifiedSignals,
     candidateMultipliers,
     totalDurationMs:      Date.now() - totalStart,
   };

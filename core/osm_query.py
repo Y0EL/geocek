@@ -5,7 +5,7 @@ from urllib.parse import quote
 
 class OSMQueryEngine:
     """
-    Mapbox-powered geocoder with multi-strategy query approach.
+    Geocek — Mapbox-powered geocoder with multi-strategy query approach.
     Tries queries in priority order and aggregates results.
     """
 
@@ -30,6 +30,40 @@ class OSMQueryEngine:
         if primary["type"] == "hospital":
             return self.query_hospital(primary["name"], bbox_str)
         return []
+
+    def search_proximity_cluster(self, poi_a: str, poi_b: str, bbox_str: str, radius_m: float = 200.0) -> List[Dict]:
+        """
+        Pencarian kluster: Cari POI A dan POI B, kembalikan titik A yang memiliki B di dekatnya.
+        Sangat berguna untuk kasus "Comet" dekat "Kantor Pos".
+        """
+        results_a = self.geocode(poi_a, bbox_str)
+        results_b = self.geocode(poi_b, bbox_str)
+        
+        if not results_a or not results_b:
+            return []
+            
+        clusters = []
+        for ra in results_a:
+            for rb in results_b:
+                dist = self._haversine(ra["lat"], ra["lon"], rb["lat"], rb["lon"])
+                if dist <= radius_m:
+                    ra["is_cluster"] = True
+                    ra["cluster_with"] = rb["name"]
+                    ra["cluster_dist"] = round(dist, 1)
+                    clusters.append(ra)
+                    break
+        
+        print(f"[Proximity] Found {len(clusters)} clusters for '{poi_a}' near '{poi_b}'")
+        return clusters
+
+    def _haversine(self, lat1, lon1, lat2, lon2) -> float:
+        import math
+        R = 6371000  # meter
+        phi1, phi2 = math.radians(lat1), math.radians(lat2)
+        dphi = math.radians(lat2 - lat1)
+        dlambda = math.radians(lon2 - lon1)
+        a = math.sin(dphi/2)**2 + math.cos(phi1)*math.cos(phi2)*math.sin(dlambda/2)**2
+        return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
     def search_all(self, query_groups: Dict[str, List[str]], bbox_str: str) -> List[Dict]:
         """

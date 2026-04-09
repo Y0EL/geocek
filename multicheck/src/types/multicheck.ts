@@ -94,7 +94,7 @@ export interface MulticheckReport {
   cp2:                CP2Result;
   cp3:                CP3Result | null;   // null jika belum ada candidates
   cp4:                CP4Result;
-  verifiedGeoSignals: Partial<GeoSignals>;   // menggantikan geo_signals raw
+  verifiedGeocekSignals: Partial<GeoSignals>;   // menggantikan geo_signals raw
   candidateMultipliers: Record<string, number>;   // candidate name → score multiplier dari CP3
   totalDurationMs:    number;
 }

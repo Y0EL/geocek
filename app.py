@@ -157,7 +157,7 @@ def analyze_zones(image_path: str, api_key: str) -> dict:
         "kiri_bawah":   (img.crop((0,    2*h//3, w//2, h)),
                          "FOKUS: warna marka jalan (KUNING=jalan nasional, PUTIH=jalan kota), tutup gorong-gorong (cari logo: PAM JAYA/PDAM/PGN), bayangan objek"),
         "kanan_bawah":  (img.crop((w//2, 2*h//3, w,   h)),
-                         "FOKUS: nomor rumah, tanaman/pohon (identifikasi spesies: angsana/glodogan/palem raja/bambu), kondisi trotoar, genangan air"),
+                         "FOKUS: nomor rumah/bangunan, petunjuk jarak (misal: Kantor Pos 30m), tanaman/pohon (identifikasi spesies: angsana/glodogan/palem raja/bambu), kondisi trotoar, genangan air"),
     }
 
     llm = ChatOpenAI(model=VISION_MODEL, api_key=api_key, max_tokens=600)
@@ -187,6 +187,9 @@ Tulis semua temuanmu dalam Bahasa Indonesia. Output HANYA JSON valid ini (null j
   "jenis_lampu_jalan": null,
   "estimasi_rasio_bayangan": null,
   "papan_rt_rw_kelurahan": null,
+  "nomor_bangunan": null,
+  "slogan_komersial": null,
+  "petunjuk_jarak": [],
   "spesies_vegetasi": [],
   "sinyal_tambahan": null
 }}"""),
@@ -227,6 +230,9 @@ def merge_zone_findings(signals_json: dict, zone_findings: dict) -> dict:
     road_colors      = []
     shadow_ratios    = []
     veg_species      = []
+    house_numbers    = []
+    slogans          = []
+    proximity_signs  = []
 
     for zname, f in zone_findings.items():
         for t in f.get("teks_ditemukan", []):
@@ -245,6 +251,10 @@ def merge_zone_findings(signals_json: dict, zone_findings: dict) -> dict:
         except Exception: pass
         for v in f.get("spesies_vegetasi", []):
             if v and v not in veg_species: veg_species.append(v)
+        if f.get("nomor_bangunan"):     house_numbers.append(f["nomor_bangunan"])
+        if f.get("slogan_komersial"):   slogans.append(f["slogan_komersial"])
+        for ps in f.get("petunjuk_jarak", []):
+            if ps and ps not in proximity_signs: proximity_signs.append(ps)
 
     # Tulis ke geo_signals
     if all_texts:        geo["visible_texts"]    = all_texts
@@ -261,6 +271,9 @@ def merge_zone_findings(signals_json: dict, zone_findings: dict) -> dict:
     if road_colors:      geo["road_marking_color"]  = road_colors[0]
     if shadow_ratios:    geo["shadow_length_ratio"] = round(sum(shadow_ratios)/len(shadow_ratios), 2)
     if veg_species:      geo["vegetation_species"]  = veg_species
+    if house_numbers:    geo["building_number"]     = house_numbers[0]
+    if slogans:          geo["commercial_slogan"]   = slogans[0]
+    if proximity_signs:  geo["proximity_indicators"] = proximity_signs
 
     return signals_json
 
@@ -273,7 +286,7 @@ def extract_signals_from_image(image_path, api_key):
     base64_image = encode_image(image_path)
     llm = ChatOpenAI(model=VISION_MODEL, api_key=api_key, max_tokens=5000)
 
-    prompt = """Kamu adalah Analis OSINT Militer tingkat tinggi, spesialis geografi Indonesia, infrastruktur urban, dan geolokasi.
+    prompt = """Kamu adalah Analis OSINT Militer tingkat tinggi, spesialis geografi Indonesia, infrastruktur urban, dan geolokasi. Nama aplikasimu adalah Geocek.
 MISI: Ekstrak SEMUA sinyal geospasial yang BENAR-BENAR TERLIHAT dalam gambar ini. Jangan mengarang — jika tidak terlihat, isi null.
 
 ATURAN KRITIS — NOLAH TOLERANSI:
@@ -288,7 +301,9 @@ ATURAN KRITIS — NOLAH TOLERANSI:
 9. MARKA JALAN: Warna marka KUNING = jalan nasional (Bina Marga). Warna PUTIH = jalan kota/provinsi. Ini penting untuk klasifikasi jalan.
 10. VEGETASI: Identifikasi spesies pohon — Angsana (merah besar) = jalan protokol DKI lama. Glodogan Tiang = trotoar DKI modern. Palem Raja = boulevard/kantor pemerintah. Ini mempersempit area.
 11. PAPAN RT/RW/KELURAHAN: Papan kecil "RW 07 Kel. Pejaten Barat" adalah sinyal lokasi SANGAT SPESIFIK — baca teks lengkapnya.
-12. BAYANGAN: Estimasi rasio bayangan (panjang_bayangan / tinggi_objek) dari benda yang terlihat. Kombinasi dengan waktu → perkiraan lintang.
+12. NOMOR BANGUNAN: Perhatikan angka yang ditempel di pagar/pilar/pintu (misal: "54", "No. 12"). Ini sangat penting untuk pinpointing.
+13. PROXIMITY SIGNS: Cari papan petunjuk arah yang menyebutkan jarak ke sebuah tempat (misal: "Kantor Pos 30M", "Bintaro 1 KM").
+14. BAYANGAN: Estimasi rasio bayangan (panjang_bayangan / tinggi_objek) dari benda yang terlihat. Kombinasi dengan waktu → perkiraan lintang.
 13. Output HANYA JSON valid. Tanpa markdown, tanpa teks tambahan.
 14. REASONING WAJIB dalam Bahasa Indonesia — jelaskan semua clue yang kamu temukan.
 
@@ -354,7 +369,8 @@ OUTPUT STRUKTUR JSON INI PERSIS (isi semua field, null jika tidak terlihat):
     "religious_buildings": [],
     "government_buildings": [],
     "educational_institutions": [],
-    "transit_facilities": []
+    "transit_facilities": [],
+    "proximity_indicators": []
   },
   "8_area_classification": {
     "area_type": "residential/commercial/industrial/mixed/government",
@@ -369,7 +385,8 @@ OUTPUT STRUKTUR JSON INI PERSIS (isi semua field, null jika tidak terlihat):
     "business_signs": [],
     "government_signs": [],
     "transit_signs": [],
-    "warning_signs": []
+    "warning_signs": [],
+    "proximity_signs": []
   },
   "10_transit_indicators": {
     "transjakarta_visible": false,
@@ -408,7 +425,9 @@ OUTPUT STRUKTUR JSON INI PERSIS (isi semua field, null jika tidak terlihat):
     "property_for_sale_texts": [],
     "government_board_text": null,
     "banner_texts": [],
-    "direction_sign_texts": []
+    "direction_sign_texts": [],
+    "building_number": null,
+    "commercial_slogan": null
   },
   "16_sun_shadow_analysis": {
     "shadow_visible": false,
@@ -464,7 +483,10 @@ OUTPUT STRUKTUR JSON INI PERSIS (isi semua field, null jika tidak terlihat):
     "rw_rt_sign": null,
     "vegetation_species": [],
     "shadow_length_ratio": null,
-    "traffic_direction": null
+    "traffic_direction": null,
+    "building_number": null,
+    "commercial_slogan": null,
+    "proximity_indicators": []
   }
 }
 """
@@ -576,6 +598,20 @@ def analyze():
             _geo["shadow_length_ratio"] = sec16["shadow_length_ratio"]
         if not _geo.get("traffic_direction") and sec17.get("traffic_direction_vs_camera"):
             _geo["traffic_direction"] = sec17["traffic_direction_vs_camera"]
+        
+        # New fields from Phase 1
+        if not _geo.get("building_number") and sec15.get("building_number"):
+            _geo["building_number"] = sec15["building_number"]
+        if not _geo.get("commercial_slogan") and sec15.get("commercial_slogan"):
+            _geo["commercial_slogan"] = sec15["commercial_slogan"]
+        
+        px = []
+        sec7 = signals_json.get("7_points_of_interest", {})
+        sec9 = signals_json.get("9_signage_and_ocr", {})
+        px.extend(sec7.get("proximity_indicators", []))
+        px.extend(sec9.get("proximity_signs", []))
+        if px:
+            _geo["proximity_indicators"] = list(set(px + _geo.get("proximity_indicators", [])))
 
         print("[*] Extracted JSON:")
         print(json.dumps(signals_json, indent=2))

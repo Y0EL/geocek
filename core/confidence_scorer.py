@@ -4,7 +4,7 @@ from .signal_parser import SignalBundle
 
 class ConfidenceScorer:
     """
-    Calculates confidence score for each candidate location.
+    Geocek — Calculates confidence score for each candidate location.
     Score 0.0 to 1.0.
     """
 
@@ -94,6 +94,24 @@ class ConfidenceScorer:
         if area_matches > 0:
             # Partial credit: 0.1 per area match, max 0.3
             weighted_score += min(0.3, area_matches * 0.1) * total_weight
+
+        # ── [NEW] Phase 4 Enhancements ─────────────────────────────────────────
+        
+        # 1. Building number match
+        if "building_number" in weights and signal_bundle.building_number:
+            num = signal_bundle.building_number.lower()
+            if num in candidate.get("name", "").lower():
+                weighted_score += weights["building_number"] * 1.0
+        
+        # 2. Proximity cluster match
+        if "proximity" in weights and candidate.get("is_cluster"):
+            weighted_score += weights["proximity"] * 1.0
+            
+        # 3. Slogan match
+        if "slogan" in weights and signal_bundle.commercial_slogan:
+            slogan = signal_bundle.commercial_slogan.lower()
+            if slogan in candidate.get("name", "").lower():
+                weighted_score += weights["slogan"] * 1.0
 
         return min(1.0, weighted_score / total_weight)
 

@@ -13,7 +13,7 @@ easyocr
 paddleocr
 fast-alpr
 
-# Layer 4 — Geosignal
+# Layer 4 — Geocek
 geopy
 osmnx
 shapely

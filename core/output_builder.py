@@ -49,7 +49,7 @@ class OutputBuilder:
                   signal_bundle: SignalBundle, duration: float) -> str:
         report = []
         report.append("══════════════════════════════════════════════")
-        report.append("🛰️  GEOSIGNAL — HASIL ANALISIS LOKASI")
+        report.append("🛰️  GEOCEK — HASIL ANALISIS LOKASI")
         report.append("══════════════════════════════════════════════")
         report.append(f"Input Signals   : {len(signal_bundle.signal_weights)} sinyal terdeteksi")
         report.append(f"Processing Time : {duration:.2f} detik")
